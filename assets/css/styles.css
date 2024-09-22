@@ -446,6 +446,15 @@ body {
   margin: 0 auto; /* Center the carousel */
 }
 
+.owl-carousel .item img {
+  height: 200px; /* Set a uniform height */
+  object-fit: cover; /* Ensure images cover the area without being distorted */
+  width: 100%; /* Ensure full width of the container */
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+
 .owl-carousel .item {
   opacity: 0.8; /* Dim the items in the background */
   transition: opacity 0.3s ease;
