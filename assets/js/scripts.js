@@ -107,23 +107,27 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("queryForm");
-  const alertBanner = document.getElementById("alertBanner");
+document.getElementById('queryForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+  const form = event.target;
+  const formData = new FormData(form);
 
-    // Show the alert banner
-    alertBanner.classList.remove("d-none"); // Remove the 'd-none' class to show the alert
-
-    // Optionally, you can reset the form after submission
-    form.reset();
-
-    // Optionally, you can hide the alert after a few seconds
-    setTimeout(() => {
-      alertBanner.classList.add("d-none"); // Re-add the 'd-none' class after a timeout
-    }, 5000); // Adjust the timeout duration as needed
+  fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => {
+      if (response.ok) {
+          document.getElementById('alertBanner').classList.remove('d-none'); // Show success banner
+          form.reset(); // Reset form
+      } else {
+          alert("There was a problem submitting the form.");
+      }
+  }).catch(error => {
+      alert("There was an error sending your message.");
   });
 });
 
