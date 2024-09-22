@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.V CABS - Round the Clock</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/svcabs-ico.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Chat on WhatsApp Button -->
+    <a href="https://wa.me/yourwhatsappphonenumber" target="_blank" id="whatsappChat"
+        class="btn btn-success my-3 whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Go to Top Button -->
+    <a href="#" id="goToTop" class="btn btn-primary goToTop" title="Go to Top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+
+    <!-- Loader Section -->
+    <div id="loader" class="loader">
+        <svg class="car" width="102" height="40" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(2 1)" stroke="#002742" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path class="car__body"
+                    d="M47.293 2.375C52.927.792 54.017.805 54.017.805c2.613-.445 6.838-.337 9.42.237l8.381 1.863c2.59.576 6.164 2.606 7.98 4.531l6.348 6.732 6.245 1.877c3.098.508 5.609 3.431 5.609 6.507v4.206c0 .29-2.536 4.189-5.687 4.189H36.808c-2.655 0-4.34-2.1-3.688-4.67 0 0 3.71-19.944 14.173-23.902zM36.5 15.5h54.01"
+                    stroke-width="3" />
+                <ellipse class="car__wheel--left" stroke-width="3.2" fill="#FFF" cx="83.493" cy="30.25" rx="6.922"
+                    ry="6.808" />
+                <ellipse class="car__wheel--right" stroke-width="3.2" fill="#FFF" cx="46.511" cy="30.25" rx="6.922"
+                    ry="6.808" />
+                <path class="car__line car__line--top" d="M22.5 16.5H2.475" stroke-width="3" />
+                <path class="car__line car__line--middle" d="M20.5 23.5H.4755" stroke-width="3" />
+                <path class="car__line car__line--bottom" d="M25.5 9.5h-19" stroke-width="3" />
+            </g>
+        </svg>
+        <div class="mx-2" style="font-size: 14px; color: #002742; font-weight: bold;">S.V CABS</div>
+    </div>
+
+    <div class="main" id="mainContent">
+        <!-- Top Bar -->
+        <div class="top-bar d-none d-md-flex justify-content-end align-items-center px-5">
+            <div class="top-content">
+                <a href="#map"><i class="fas fa-map-marker-alt"></i> Chennai, TN, India</a>
+                <a href="tel:914424451902"><i class="fas fa-phone"></i> 91 44 2445 1902</a>
+                <a href="mailto:svcabs@gmail.com"><i class="fas fa-envelope"></i> svcabs@gmail.com</a>
+                <a href="mailto:svcabs@gmail.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:svcabs@gmail.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNavbar">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="assets/images/svcabs-logo.png" alt="SV CABS Logo" class="d-inline-block align-text-top">
+                    S.V CABS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Left side: Text content -->
+                    <div class="col-lg-6 col-md-12 hero-content">
+                        <h1 id="hero-heading">Safe, Reliable, and Comfortable Rides with S.V CABS</h1>
+                        <p id="hero-description">
+                            Whether you need a cab for corporate travel or personal trips, we offer seamless
+                            transportation solutions tailored to your needs. Serving Chennai's businesses and customers
+                            with professional drivers and a well-maintained fleet.
+                        </p>
+                        <a href="#fleet" class="hero-button btn btn-primary" id="hero-button">Explore Our Fleet</a>
+                    </div>
+
+                    <!-- Right side: Booking section -->
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-center mt-4 mt-lg-0">
+                        <div class="booking-card">
+                            <h2>Book Your Ride Now</h2>
+                            <p>Click the button below to book your cab directly via WhatsApp.</p>
+                            <a id="whatsapp-booking-link"
+                                href="https://api.whatsapp.com/send?phone=919876543210&text=Hi%20I%20would%20like%20to%20book%20a%20cab"
+                                class="btn btn-success" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Book a Ride on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 about-content">
+                    <h2>About Us</h2>
+                    <p>
+                        "At S.V CABS, we've been driven by a passion for delivering exceptional transportation solutions across Chennai for over 25 years. Founded in 2000 in Adyar, our journey has been marked by unwavering dedication to safety, reliability, and customer satisfaction. With a diverse fleet of well-maintained vehicles and experienced drivers, we provide tailored cab services for individuals, corporations, and events. From airport transfers to outstation trips, our commitment to excellence has earned us the trust of Chennai's residents and visitors alike. As we continue to innovate and expand, our core values remain unchanged: customer-centric approach, safety above all, timely and reliable services, transparency, and continuous improvement."
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 about-image d-flex justify-content-center">
+                    <img src="https://via.placeholder.com/500x300" alt="About Us" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container text-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6 stats-item">
+                    <h3>500+</h3>
+                    <h5><i class="fa-solid fa-users"></i> Customers Served</h5>
+                </div>
+                <div class="col-lg-4 col-md-6 stats-item">
+                    <h3>25+</h3>
+                    <h5><i class="fa-solid fa-award"></i> Years Of Trusted Service </h5>
+                </div>
+                <div class="col-lg-4 col-md-6 stats-item">
+                    <h3>50k+</h3>
+                    <h5><i class="fas fa-car"></i> Rides Completed </h5>
+                </div>
+                <div class="col-lg-4 col-md-6 stats-item">
+                    <h3>50+</h3>
+                    <h5><i class="fas fa-handshake"></i> Corporate Partners </h5>
+                </div>
+                <div class="col-lg-4 col-md-6 stats-item">
+                    <h3>98%</h3>
+                    <h5><i class="fas fa-star"></i> Satisfaction Rate</h5>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <h5 class="text-center">One-Stop Transportation Solution - Local, Outstation, and Corporate Cab Services.</h5>
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 1" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Local Rides</h5>
+                            <p class="card-text">
+                                "Experience seamless intra-city travel with our 24/7 local ride services."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 2" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Outstation Trips</h5>
+                            <p class="card-text">
+                                "Explore beyond the city with our comfortable and affordable Outstation services"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 3" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Airport Transfers</h5>
+                            <p class="card-text">
+                                "Reliable airport pickups and drop-offs, every time, every flight."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 4" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Solutions</h5>
+                            <p class="card-text">
+                                "Corporate travel simplified: Employees round-trips, Airport transfers and office shuttles."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 5" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Events & Weddings</h5>
+                            <p class="card-text">
+                                "Guest experience matters: Book our reliable event transportation services."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet-section">
+        <div class="container">
+            <h2 class="text-center">Our Fleet</h2>
+            <h5 class="text-center">A diverse fleet to meet every transportation need.</h5>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Fleet 1" />
+                    <div class="text-center">
+                        <h5>Sedan</h5>
+                        <p>Toyota Etios / Maruti Suzuki Dzire</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Fleet 2" />
+                    <div class="text-center">
+                        <h5>SUV</h5>
+                        <p>Toyota Innova / Crysta / Hycross</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Fleet 3" />
+                    <div class="text-center">
+                        <h5>Vans</h5>
+                        <p>Tempo Traveller / Mini Bus</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Fleet 3" />
+                    <div class="text-center">
+                        <h5>Luxury Sedan</h5>
+                        <p>Benz / Audi</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Fleet 3" />
+                    <div class="text-center">
+                        <h5>Coach</h5>
+                        <p>18/22/32/40/45-Seater Bus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section id="testimonials" class="testimonials parallax-bg">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-header">
+                            <img src="assets/images/man-1.png"
+                                alt="Client Logo" class="client-logo">
+                        </div> -->
+                        <p>"The service was outstanding! I can't recommend them enough."</p>
+                        <h4>- Jane Doe</h4>
+                        <span>CEO, Example Co.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-header">
+                            <img src="assets/images/man-2.png" alt="Client Logo" class="client-logo">
+                        </div> -->
+                        <p>"A life-changing experience. Truly professional and dedicated."</p>
+                        <h4>- John Smith</h4>
+                        <span>Founder, Business Inc.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-header">
+                            <img src="assets/images/man-1.png" alt="Client Logo" class="client-logo">
+                        </div> -->
+                        <p>"Excellent quality and support. They exceeded my expectations!"</p>
+                        <h4>- Emily Johnson</h4>
+                        <span>Manager, Firm LLC</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-header">
+                            <img src="assets/images/man_4140057.png" alt="Client Logo" class="client-logo">
+                        </div> -->
+                        <p>"Excellent quality and support. They exceeded my expectations!"</p>
+                        <h4>- Naruto Uzumaki</h4>
+                        <span>Hokage, Leaf Village</span>
+                    </div>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brands" class="brands">
+        <div class="container">
+            <h2>Brands That Trust Us</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="path/to/logo1.png" alt="Brand 1" class="brand-logo">
+                </div>
+                <div class="item">
+                    <img src="path/to/logo2.png" alt="Brand 2" class="brand-logo">
+                </div>
+                <div class="item">
+                    <img src="path/to/logo3.png" alt="Brand 3" class="brand-logo">
+                </div>
+                <div class="item">
+                    <img src="path/to/logo4.png" alt="Brand 4" class="brand-logo">
+                </div>
+                <div class="item">
+                    <img src="path/to/logo5.png" alt="Brand 5" class="brand-logo">
+                </div>
+                <!-- Add more logos as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Contact Details</h1>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h3>Need Help?</h3>
+                    <p><strong>Post your query here!</strong></p>
+                    <!-- Alert Banner -->
+                    <div id="alertBanner" class="alert alert-success d-none" role="alert">
+                        Your message has been sent successfully!
+                    </div>
+                    <form id="queryForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6 contact-para">
+                    <!-- <h2>Contact Details</h2> -->
+                    <p><strong><i class="fas fa-phone"></i></strong> <a href="tel:914424451902">91 44 2445 1902</a></p>
+                    <p><strong><i class="fas fa-envelope"></i></strong> <a
+                            href="mailto:svcabs@gmail.com">svcabs@gmail.com</a></p>
+                    <p><strong><i class="fas fa-map-marker-alt"></i></strong> Location: Adyar, Chennai, TN, India</p>
+
+                    <h2>Our Location</h2>
+                    <div class="map mb-3" id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15550.697868953679!2d80.2521611!3d12.9926609!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267ecb386b797%3A0x9140e457c0b64b5!2sS.V.CABS!5e0!3m2!1sen!2sin!4v1726998549172!5m2!1sen!2sin"
+                            width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bg-light p-4 rounded text-center">
+                <!-- Partner Form Section -->
+                <div class="col-12 col-md-5 mb-4 mb-md-0">
+                    <h2>Interested in Partnering?</h2>
+                    <p>Have a fleet? Click the button below to fill out our partner form:</p>
+                    <a href="https://forms.gle/your-google-form-link" class="btn btn-success" target="_blank">Partner Form</a>
+                </div>
+            
+                <!-- Divider - hidden on small screens -->
+                <div class="col-12 col-md-2 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                    <div class="d-none d-md-block" style="border-left: 2px solid #ccc; height: 100%;"></div>
+                </div>
+            
+                <!-- Driver Form Section -->
+                <div class="col-12 col-md-5">
+                    <h2>Join Us as a Driver</h2>
+                    <p>Looking for a career as a driver? Click the button below to fill out our driver form:</p>
+                    <a href="https://forms.gle/your-driver-form-link" class="btn btn-primary" target="_blank">Driver Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer Section -->
+ <footer class="bg-primary text-white pt-5 pb-4 footer">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <!-- Left Side: Logo & Info -->
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+                <span class="text-white" style="font-family: 'Times New Roman', Times, sans-serif;">
+                    <img src="assets/images/svcabs-logo.png" alt="Logo" class="footer-logo mb-2" />
+                    <h3>S.V CABS</h3>
+                </span>
+                <h5>Round the Clock</h5>
+            </div>
+
+            <!-- Second Column: Services -->
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+                <h5>Our Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Local Trips</a></li>
+                    <li><a href="#" class="text-white">Outstation Trips</a></li>
+                    <li><a href="#" class="text-white">Corporate Trips</a></li>
+                </ul>
+            </div>
+
+            <!-- Third Column: Contact -->
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+                <h5>Contact Us</h5>
+                <p>Email: <a href="mailto:svcabs@gmail.com" class="text-white"> svcabs@gmail.com</a></p>
+                <p>Phone: <a href="tel:914424451902" class="text-white"></a> 91 44 2445 1902</p>
+                <p>Location: Chennai, TN, India</p>
+            </div>
+
+            <!-- Fourth Column: Social Links -->
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                <h5>Follow Us</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Center: Copyright -->
+    <div class="copy-text text-center pt-3">
+        <p>&copy; 2024 S.V CABS. All rights reserved.</p>
+    </div>
+ </footer>
+
+</div>
+
+
+    <!-- Main ends -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

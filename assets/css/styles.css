@@ -1,0 +1,682 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Loader Wrapper */
+.loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Car SVG Animations */
+.car__body {
+  animation: shake 0.2s ease-in-out infinite alternate;
+}
+
+.car__line {
+  transform-origin: center right;
+  stroke-dasharray: 22;
+  animation: line 0.8s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+.car__line--top {
+  animation-delay: 0s;
+}
+
+.car__line--middle {
+  animation-delay: 0.2s;
+}
+
+.car__line--bottom {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for Car Shake */
+@keyframes shake {
+  0% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(3%);
+  }
+}
+
+/* Keyframes for Line Movement */
+@keyframes line {
+  0% {
+    stroke-dashoffset: 22;
+  }
+  25% {
+    stroke-dashoffset: 22;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  51% {
+    stroke-dashoffset: 0;
+  }
+  80% {
+    stroke-dashoffset: -22;
+  }
+  100% {
+    stroke-dashoffset: -22;
+  }
+}
+
+/* goto top and whatsapp */
+
+#whatsappChat {
+  position: fixed;
+  bottom: 70px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it's on top */
+}
+
+#goToTop {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 1000; /* Ensure it's on top */
+}
+
+#goToTop,
+#whatsappChat {
+  border-radius: 50%; /* Circular buttons */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#goToTop:hover,
+#whatsappChat:hover {
+  opacity: 0.8; /* Slight transparency on hover */
+}
+
+.goToTop.active {
+  background-color: #ffffff !important; /* Color when near footer */
+  opacity: 1;
+  color: #0d6efd !important;
+}
+
+/* Main Content */
+.main {
+  display: none; /* Hide content initially */
+}
+
+/* Top Bar, Navbar, Hero Section, and Other Styles */
+.top-bar {
+  background-color: #0d6efd;
+  padding: 10px 0;
+}
+
+.top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.top-bar .top-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.top-bar a i {
+  margin-right: 5px;
+}
+
+.navbar-nav a {
+  font-size: 18px;
+  color: #0d6efd !important;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 48px;
+  font-weight: bold;
+  color: #0d6efd !important;
+  font-family: "Times New Roman", Times, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand img {
+  margin-left: 10px;
+  max-width: 100px; /* Set a max width for the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between logo and text */
+}
+
+.navbar-nav .nav-link {
+  position: relative; /* Establish a positioning context for the underline */
+  text-decoration: none; /* Remove default underline */
+  padding-right: 0 20px;
+}
+
+.navbar-nav .nav-link::after {
+  content: ""; /* Create an empty content for the underline */
+  position: absolute; /* Position it absolutely within the link */
+  left: 50%; /* Start from the middle of the link */
+  bottom: -5px; /* Position it below the link */
+  width: 0; /* Start with no width */
+  height: 2px; /* Height of the underline */
+  background-color: #0d6efd; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease; /* Transition for width and position */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Expand width to full on hover */
+  left: 0%; /* Move it to start from the left */
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%; /* Keep the underline active */
+  left: 0; /* Align it to the left */
+}
+
+/* Sticky navbar styles */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #0056b3; /* Darker background when sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Hero section styles */
+.hero-section {
+  height: 100vh;
+  background-color: #f4f4f4; /* Light background to contrast content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden; /* Prevent overflow during animation */
+}
+
+/* Hero content column */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0; /* Start hidden for fade-in */
+  transform: translateY(20px); /* Slide from below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and slide */
+}
+
+.hero-content.show {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Back to original position */
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 100%;
+}
+
+
+/* Card-like booking section */
+.booking-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 350px;
+  text-align: center;
+  transform: translateY(-20px); /* Protrude slightly */
+  position: relative;
+  z-index: 1;
+}
+
+.booking-card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.booking-card p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.booking-card .btn {
+  font-size: 18px;
+  padding: 12px 30px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.booking-card .btn:hover {
+  background-color: #218838;
+}
+
+/* Optional: Make the card pop out more */
+.booking-card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  z-index: -1;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+
+  .navbar-brand img {
+    max-width: 70px;
+    height: 40px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative; /* Ensure proper positioning */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none; /* Remove the underline for mobile view */
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    /* transform: scale(1.1); Scale up on hover */
+    background-color: #0d6efd; /* Optional: change text color on hover */
+    color: #ffffff !important;
+  }
+  .booking-card {
+    padding: 20px;
+    margin-top: 10%;
+  }
+
+  .booking-card h2 {
+    font-size: 20px;
+  }
+
+  .booking-card p {
+    font-size: 14px;
+  }
+
+  .booking-card .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+
+}
+
+/* Transition Effect for About Us and Stats Sections */
+/* .about-us-section, .stats-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-us-section.show, .stats-section.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.about-us-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.about-content h2 {
+  font-size: 40px;
+}
+
+.about-content p {
+  font-size: 18px;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.stats-section {
+  background-color: #0d6efd;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.stats-item h3 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.stats-item p {
+  font-size: 18px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 60px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-img-top {
+  border-bottom: 2px solid #002742;
+}
+
+/* Fleet Section */
+.fleet-section {
+  padding: 60px 0;
+}
+
+.owl-carousel .item {
+  text-align: center;
+  padding: 10px;
+}
+
+.owl-carousel img {
+  border-radius: 10px;
+}
+
+.owl-carousel {
+  width: 100%; /* Adjust the width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.owl-carousel .item {
+  opacity: 0.8; /* Dim the items in the background */
+  transition: opacity 0.3s ease;
+}
+
+.owl-carousel .item.active {
+  opacity: 1; /* Highlight the active item */
+}
+
+/* Testimonial */
+.testimonials {
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-header {
+  margin-bottom: 15px;
+}
+
+/* .client-logo { */
+  /* width: 64px; Adjust size as needed */
+  /* height: 100%; Adjust size as needed */
+  /* border-radius: 50%; For a circular logo or image */
+  /* object-fit: cover; Ensures the image covers the area */
+/* } */
+
+.owl-carousel .item {
+  padding: 20px;
+}
+
+.testimonial h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.parallax-bg {
+  /* background-image: url("https://via.placeholder.com/1920x1080"); */
+  background-color: #0d6efd;
+  background-attachment: fixed; /* This creates the parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1; /* Ensure it sits behind the content */
+}
+
+/* Brands */
+.brands {
+  background-color: #f9f9f9;
+  padding: 30px 0; /* Reduced padding for a smaller section */
+  text-align: center;
+}
+
+.brand-logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.7; /* Slightly faded for a stylish look */
+  transition: opacity 0.3s;
+}
+
+.brand-logo:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.brands .h2 {
+  font-size: 2rem; /* Slightly smaller heading */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Contact */
+.contact{
+    background-color: #f4f4f4;
+}
+
+.contact-para a{
+    text-decoration: none;
+    color: #000;
+}
+
+.map {
+  border: 2px solid #007bff; /* Border around the map */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Ensure the iframe fits */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.map:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.btn {
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for buttons */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow for the partner section */
+}
+
+@media (max-width: 768px) {
+    .contact-para{
+        margin-top: 10%;
+    }
+
+    .map {
+        width: 100%; /* Full width for smaller screens */
+        height: 300px; /* Adjust height for mobile */
+    }
+}
+/* Footer */
+footer {
+    background-color: #002742; /* Dark primary color */
+}
+
+footer .footer-logo {
+    max-width: 100px; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+footer p {
+    margin-bottom: 0.5rem; /* Space below paragraph */
+    font-size: 0.9rem; /* Adjust font size */
+    color: #ffffff; /* White color */
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff; /* White color for links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+footer a:hover {
+    color: #fbff00; /* Change color on hover */
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+footer .copy-text {
+    border-top: 1px solid #ffffff; /* Add a top border for separation */
+    padding-top: 1rem;
+    margin-top: 1.5rem; /* Add margin for spacing */
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #0d6efd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-link i {
+    font-size: 18px;
+}
+
+.social-link:hover {
+    background-color: #0b336e; /* Darken the background on hover */
+    color: #ffffff;
+}
+
+.social-link.me-3 {
+    margin-right: 1rem; /* Adjust spacing between icons */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 576px) {
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-link i {
+        font-size: 14px;
+    }
+
+    .social-link.me-3 {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer .row > div {
+        margin-bottom: 1.5rem; /* Space out columns on smaller screens */
+    }
+
+    footer .col-md-4 {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
