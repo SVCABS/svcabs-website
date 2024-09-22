@@ -123,6 +123,11 @@ document.getElementById('queryForm').addEventListener('submit', function(event) 
       if (response.ok) {
           document.getElementById('alertBanner').classList.remove('d-none'); // Show success banner
           form.reset(); // Reset form
+
+          // Optionally, you can hide the alert after a few seconds
+          setTimeout(() => {
+            alertBanner.classList.add("d-none"); // Re-add the 'd-none' class after a timeout
+          }, 5000); // Adjust the timeout duration as needed
       } else {
           alert("There was a problem submitting the form.");
       }
