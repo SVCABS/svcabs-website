@@ -454,6 +454,15 @@ body {
   margin: 0 auto; /* Center the image */
 }
 
+/* Mobile-specific styles to avoid cropping */
+@media (max-width: 576px) {
+  .owl-carousel .item img {
+      object-fit: contain; /* Ensure the entire image fits inside the container */
+      height: auto; /* Allow height to adjust naturally */
+      max-height: 180px; /* Set a maximum height for images */
+  }
+}
+
 
 .owl-carousel .item {
   opacity: 0.8; /* Dim the items in the background */
