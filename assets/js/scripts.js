@@ -6,7 +6,7 @@ window.onload = function () {
   // Fade out the loader by reducing opacity
   setTimeout(function () {
     loader.style.opacity = "0"; // Start fade out
-  }, 500); // Loader duration (.5 second)
+  }, 300); // Loader duration (.5 second)
 
   // Hide the loader and show main content after opacity transition completes (0.5s later)
   setTimeout(function () {
@@ -139,7 +139,7 @@ document.getElementById('queryForm').addEventListener('submit', function(event) 
 const heroContent = [
   {
       heading: "Professional and Reliable Transportation",
-      description: "With more than 25 years of experience, S.V CABS is dedicated to providing seamless cab services to both businesses and individuals. Whether it's a busy workday or a relaxed family trip, we ensure your journey is comfortable and worry-free.",
+      description: "With more than 25 years of experience, S V CABS is dedicated to providing seamless cab services to both businesses and individuals. Whether it's a busy workday or a relaxed family trip, we ensure your journey is comfortable and worry-free.",
       buttonText: "Explore Our Services",
       buttonLink: "#services"
   },

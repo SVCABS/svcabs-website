@@ -498,6 +498,10 @@ body {
   margin-bottom: 15px;
 }
 
+.star-ratings i {
+  color: gold; /* Gold color for the stars */
+}
+
 /* .client-logo { */
   /* width: 64px; Adjust size as needed */
   /* height: 100%; Adjust size as needed */
@@ -672,6 +676,7 @@ footer .copy-text {
 .social-link.me-3 {
     margin-right: 1rem; /* Adjust spacing between icons */
 }
+
 
 /* Mobile-specific styles */
 @media (max-width: 576px) {
