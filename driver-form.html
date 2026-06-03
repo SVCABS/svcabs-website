@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us as a Driver – S V CABS</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/svcabs-ico.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:  #002742;
+      --blue:  #0d6efd;
+      --blue2: #3d8bfd;
+      --red:   #D8261C;
+      --cream: #f4f8ff;
+      --light: #eaf1ff;
+      --white: #FFFFFF;
+      --gray:  #6B7280;
+      --radius: 12px;
+      --t: 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #003a61 60%, #0056b3 100%);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230d6efd' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-header::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--blue), var(--red), transparent);
+    }
+    .brand-link {
+      display: inline-flex; align-items: center; gap: .6rem;
+      text-decoration: none; margin-bottom: 1.5rem;
+    }
+    .brand-link img { height: 40px; width: auto; }
+    .brand-link span {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 900;
+      color: var(--red);
+    }
+    .page-header .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(13,110,253,.15);
+      border: 1px solid rgba(13,110,253,.35);
+      color: #7db8ff; font-size: .72rem;
+      letter-spacing: .16em; text-transform: uppercase;
+      padding: .3rem .85rem; border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: var(--white); margin-bottom: .6rem;
+    }
+    .page-header h1 span { color: #7db8ff; }
+    .page-header p { color: rgba(255,255,255,.65); font-size: .95rem; max-width: 480px; margin: 0 auto; }
+
+    /* ── FORM CARD ── */
+    .form-wrap {
+      max-width: 680px; margin: 2rem auto 3rem;
+      padding: 0 1rem;
+    }
+    .form-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 16px 60px rgba(0,0,0,.12);
+      overflow: hidden;
+    }
+    .form-card::before {
+      content: '';
+      display: block; height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--red));
+    }
+    .form-body { padding: 2rem; }
+
+    /* ── SECTION DIVIDERS ── */
+    .form-section { margin-bottom: 1.6rem; }
+    .form-section-title {
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: .9rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .form-section-title::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, rgba(13,110,253,.2), transparent);
+    }
+
+    /* ── FIELDS ── */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-group { display: flex; flex-direction: column; margin-bottom: .75rem; }
+    .form-group label {
+      font-size: .72rem; font-weight: 600;
+      color: var(--navy); margin-bottom: .28rem;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    .form-group label .req { color: var(--red); margin-left: 2px; }
+    .form-control, .form-select {
+      border: 1.5px solid #E5E7EB; border-radius: 8px;
+      padding: .55rem .8rem; font-size: .88rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--navy); background: var(--cream);
+      transition: border-color var(--t), box-shadow var(--t);
+      width: 100%; appearance: none;
+    }
+    .form-control:focus, .form-select:focus {
+      outline: none; border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(13,110,253,.12);
+    }
+    textarea.form-control { resize: vertical; min-height: 80px; }
+
+    /* radio group */
+    .radio-group { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .1rem; }
+    .radio-pill input { display: none; }
+    .radio-pill label {
+      padding: .35rem .85rem; border-radius: 100px;
+      border: 1.5px solid #E5E7EB;
+      font-size: .82rem; font-weight: 500;
+      color: var(--gray); cursor: pointer;
+      transition: all var(--t);
+      text-transform: none; letter-spacing: 0;
+    }
+    .radio-pill input:checked + label {
+      background: var(--navy); color: var(--white);
+      border-color: var(--navy);
+    }
+
+    /* checkbox */
+    .check-group { display: flex; align-items: flex-start; gap: .6rem; margin-top: .5rem; }
+    .check-group input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); margin-top: 2px; flex-shrink: 0; }
+    .check-group label { font-size: .82rem; color: var(--gray); line-height: 1.5; text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+    /* ── SUBMIT ── */
+    .btn-submit {
+      width: 100%; padding: .85rem;
+      background: linear-gradient(135deg, var(--blue), #0056b3);
+      color: var(--white); font-weight: 700; font-size: .95rem;
+      border: none; border-radius: 8px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      transition: all var(--t); margin-top: 1rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(13,110,253,.35); }
+    .submit-note { text-align: center; font-size: .72rem; color: var(--gray); margin-top: .6rem; }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      text-align: center; padding: 1.5rem;
+      color: rgba(0,39,66,.4); font-size: .78rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .page-footer a { color: var(--blue); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-body { padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="brand-link">
+    <img src="assets/images/svcabs-logo.png" alt="S V CABS" />
+    <span>S V CABS</span>
+  </a>
+  <div class="badge"><i class="fas fa-id-card"></i> Driver Application</div>
+  <h1>Join Us as a <span>Professional Driver</span></h1>
+  <p>Be part of Chennai's most trusted cab network. Fill in your details and we'll get back to you within 48 hours.</p>
+</div>
+
+<div class="form-wrap">
+  <div class="form-card">
+    <div class="form-body">
+      <form id="driverForm">
+
+        <!-- Personal Info -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-user"></i> Personal Information</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control" name="fullName" placeholder="As per Aadhaar" required />
+            </div>
+            <div class="form-group">
+              <label>Date of Birth <span class="req">*</span></label>
+              <input type="date" class="form-control" name="dob" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number <span class="req">*</span></label>
+              <input type="tel" class="form-control" name="phone" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+            <div class="form-group">
+              <label>Alternate Phone</label>
+              <input type="tel" class="form-control" name="altPhone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" name="email" placeholder="you@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Residential Address <span class="req">*</span></label>
+            <textarea class="form-control" name="address" placeholder="Full address with area, Chennai" required></textarea>
+          </div>
+        </div>
+
+        <!-- Licence & Experience -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-id-badge"></i> Licence &amp; Experience</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Driving Licence No. <span class="req">*</span></label>
+              <input type="text" class="form-control" name="licenceNo" placeholder="TN XX XXXXXXXXXX" required />
+            </div>
+            <div class="form-group">
+              <label>Licence Expiry Date <span class="req">*</span></label>
+              <input type="date" class="form-control" name="licenceExpiry" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Licence Type <span class="req">*</span></label>
+            <div class="radio-group">
+              <div class="radio-pill"><input type="radio" name="licenceType" id="lt1" value="LMV" /><label for="lt1">LMV</label></div>
+              <div class="radio-pill"><input type="radio" name="licenceType" id="lt2" value="Transport" /><label for="lt2">Transport</label></div>
+              <div class="radio-pill"><input type="radio" name="licenceType" id="lt3" value="HMV" /><label for="lt3">HMV</label></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Years of Driving Experience <span class="req">*</span></label>
+              <select class="form-select" name="experience" required>
+                <option value="">Select…</option>
+                <option>Less than 1 year</option>
+                <option>1 – 3 years</option>
+                <option>3 – 5 years</option>
+                <option>5 – 10 years</option>
+                <option>10+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Languages Spoken <span class="req">*</span></label>
+              <input type="text" class="form-control" name="languages" placeholder="e.g. Tamil, English, Telugu" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle Info -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-car"></i> Vehicle Details (if own vehicle)</div>
+          <div class="form-group">
+            <label>Do you own a vehicle?</label>
+            <div class="radio-group">
+              <div class="radio-pill"><input type="radio" name="ownVehicle" id="ov1" value="Yes" /><label for="ov1">Yes</label></div>
+              <div class="radio-pill"><input type="radio" name="ownVehicle" id="ov2" value="No" checked /><label for="ov2">No</label></div>
+            </div>
+          </div>
+          <div class="form-row" id="vehicleDetails">
+            <div class="form-group">
+              <label>Vehicle Type</label>
+              <select class="form-select" name="vehicleType">
+                <option value="">Select…</option>
+                <option>Sedan</option>
+                <option>SUV</option>
+                <option>Tempo Traveller</option>
+                <option>Luxury</option>
+                <option>Bus / Coach</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Vehicle Model &amp; Year</label>
+              <input type="text" class="form-control" name="vehicleModel" placeholder="e.g. Toyota Etios 2020" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Vehicle Registration No.</label>
+            <input type="text" class="form-control" name="regNo" placeholder="TN XX XX XXXX" />
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-clock"></i> Availability &amp; Preferences</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Shift Preference <span class="req">*</span></label>
+              <select class="form-select" name="shift" required>
+                <option value="">Select…</option>
+                <option>Day Shift (6AM – 6PM)</option>
+                <option>Night Shift (6PM – 6AM)</option>
+                <option>Full Day (24 hrs)</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Trip Type Preference</label>
+              <select class="form-select" name="tripPref">
+                <option value="">Select…</option>
+                <option>Local only</option>
+                <option>Outstation only</option>
+                <option>Both</option>
+                <option>Airport transfers</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Current Employment Status</label>
+            <div class="radio-group">
+              <div class="radio-pill"><input type="radio" name="empStatus" id="es1" value="Full-time" /><label for="es1">Full-time</label></div>
+              <div class="radio-pill"><input type="radio" name="empStatus" id="es2" value="Part-time" /><label for="es2">Part-time</label></div>
+              <div class="radio-pill"><input type="radio" name="empStatus" id="es3" value="Freelance" /><label for="es3">Freelance</label></div>
+              <div class="radio-pill"><input type="radio" name="empStatus" id="es4" value="Not employed" /><label for="es4">Not employed</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-file-alt"></i> Documents Available</div>
+          <div class="radio-group" style="flex-direction:column;gap:.4rem">
+            <div class="check-group"><input type="checkbox" name="doc_aadhaar" id="doc1" /><label for="doc1">Aadhaar Card</label></div>
+            <div class="check-group"><input type="checkbox" name="doc_pan" id="doc2" /><label for="doc2">PAN Card</label></div>
+            <div class="check-group"><input type="checkbox" name="doc_police" id="doc3" /><label for="doc3">Police Verification Certificate</label></div>
+            <div class="check-group"><input type="checkbox" name="doc_medical" id="doc4" /><label for="doc4">Medical Fitness Certificate</label></div>
+            <div class="check-group"><input type="checkbox" name="doc_badge" id="doc5" /><label for="doc5">Driver Badge (Tourist / Commercial)</label></div>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-comment-alt"></i> Additional Information</div>
+          <div class="form-group">
+            <label>Previous Employer / Company (if any)</label>
+            <input type="text" class="form-control" name="prevEmployer" placeholder="e.g. Uber, Ola, Private operator" />
+          </div>
+          <div class="form-group">
+            <label>Anything else you'd like us to know?</label>
+            <textarea class="form-control" name="remarks" placeholder="Any special skills, medical conditions, references, etc."></textarea>
+          </div>
+          <div class="check-group" style="margin-top:.5rem">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">I confirm that all information provided is accurate and I consent to S V CABS contacting me regarding this application. <span style="color:var(--red)">*</span></label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i> Submit Application
+        </button>
+        <p class="submit-note">Your application will be sent to our team. We'll reach out within 48 hours.</p>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="page-footer">
+  <a href="index.html"><i class="fas fa-arrow-left"></i> Back to S V CABS</a> &nbsp;·&nbsp;
+  &copy; 2025 S V CABS · <a href="mailto:svcabs@gmail.com">svcabs@gmail.com</a>
+</div>
+
+<script>
+document.getElementById('driverForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const f = this;
+  const g = name => f.querySelector(`[name="${name}"]`);
+  const gv = name => { const el = g(name); return el ? el.value.trim() : ''; };
+  const gr = name => { const el = f.querySelector(`input[name="${name}"]:checked`); return el ? el.value : 'Not specified'; };
+  const gc = name => f.querySelector(`[name="${name}"]`)?.checked ? 'Yes' : 'No';
+
+  const docs = [
+    gc('doc_aadhaar') === 'Yes' ? 'Aadhaar' : '',
+    gc('doc_pan') === 'Yes' ? 'PAN' : '',
+    gc('doc_police') === 'Yes' ? 'Police Verification' : '',
+    gc('doc_medical') === 'Yes' ? 'Medical Fitness' : '',
+    gc('doc_badge') === 'Yes' ? 'Driver Badge' : '',
+  ].filter(Boolean).join(', ') || 'None selected';
+
+  const subject = encodeURIComponent(`Driver Application – ${gv('fullName')}`);
+  const body = encodeURIComponent(
+`DRIVER APPLICATION – S V CABS
+==============================
+
+PERSONAL INFORMATION
+Full Name       : ${gv('fullName')}
+Date of Birth   : ${gv('dob')}
+Phone           : ${gv('phone')}
+Alternate Phone : ${gv('altPhone') || 'N/A'}
+Email           : ${gv('email') || 'N/A'}
+Address         : ${gv('address')}
+
+LICENCE & EXPERIENCE
+Licence No.     : ${gv('licenceNo')}
+Licence Expiry  : ${gv('licenceExpiry')}
+Licence Type    : ${gr('licenceType')}
+Experience      : ${gv('experience')}
+Languages       : ${gv('languages')}
+
+VEHICLE DETAILS
+Own Vehicle     : ${gr('ownVehicle')}
+Vehicle Type    : ${gv('vehicleType') || 'N/A'}
+Vehicle Model   : ${gv('vehicleModel') || 'N/A'}
+Reg. No.        : ${gv('regNo') || 'N/A'}
+
+AVAILABILITY
+Shift Pref.     : ${gv('shift')}
+Trip Pref.      : ${gv('tripPref') || 'N/A'}
+Emp. Status     : ${gr('empStatus')}
+
+DOCUMENTS AVAILABLE
+${docs}
+
+ADDITIONAL INFORMATION
+Prev. Employer  : ${gv('prevEmployer') || 'N/A'}
+Remarks         : ${gv('remarks') || 'N/A'}
+`);
+
+  window.location.href = `mailto:svcabs@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
