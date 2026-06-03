@@ -315,27 +315,20 @@
       padding: 1.25rem 1.5rem;
       box-shadow: 0 24px 60px rgba(0,0,0,.35), 0 0 0 1px rgba(13,110,253,.12);
       position: relative; z-index: 2;
-      max-height: 90vh;
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: #0d6efd transparent;
     }
-    .booking-card::-webkit-scrollbar { width: 4px; }
-    .booking-card::-webkit-scrollbar-track { background: transparent; }
-    .booking-card::-webkit-scrollbar-thumb { background: #0d6efd; border-radius: 4px; }
     .booking-card h3 {
-      font-size: 1.2rem; color: var(--navy); margin-bottom: .15rem;
+      font-size: 1.1rem; color: var(--navy); margin-bottom: .1rem;
     }
-    .booking-card .sub { color: var(--gray); font-size: .8rem; margin-bottom: 1rem; }
+    .booking-card .sub { color: var(--gray); font-size: .75rem; margin-bottom: .7rem; }
 
     .trip-toggle {
-      display: flex; gap: .5rem; margin-bottom: .9rem;
-      background: var(--light); padding: .3rem; border-radius: 8px;
+      display: flex; gap: .4rem; margin-bottom: .6rem;
+      background: var(--light); padding: .25rem; border-radius: 8px;
     }
     .trip-toggle label {
       flex: 1; text-align: center;
-      padding: .45rem; border-radius: 6px;
-      cursor: pointer; font-size: .85rem; font-weight: 500;
+      padding: .35rem .2rem; border-radius: 6px;
+      cursor: pointer; font-size: .78rem; font-weight: 500;
       color: var(--gray); transition: all var(--transition);
     }
     .trip-toggle input[type=radio] { display: none; }
@@ -343,11 +336,11 @@
       background: var(--navy); color: var(--white);
     }
 
-    .form-group { margin-bottom: .7rem; }
-    .form-group label { font-size: .8rem; font-weight: 600; color: var(--navy); margin-bottom: .35rem; display: block; letter-spacing: .04em; text-transform: uppercase; }
+    .form-group { margin-bottom: .5rem; }
+    .form-group label { font-size: .72rem; font-weight: 600; color: var(--navy); margin-bottom: .2rem; display: block; letter-spacing: .04em; text-transform: uppercase; }
     .form-control, .form-select {
       border: 1.5px solid #E5E7EB; border-radius: 8px;
-      padding: .6rem .85rem; font-size: .9rem; font-family: var(--font-body);
+      padding: .45rem .75rem; font-size: .85rem; font-family: var(--font-body);
       color: var(--navy); background: var(--cream);
       transition: border-color var(--transition), box-shadow var(--transition);
       width: 100%;
@@ -357,29 +350,29 @@
       border-color: #0d6efd;
       box-shadow: 0 0 0 3px rgba(13,110,253,.15);
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 
     .outstation-fields { display: none; }
 
-    .airport-fields .form-group { margin-bottom: .5rem; }
-    .airport-fields .form-group label { font-size: .75rem; margin-bottom: .25rem; }
+    .airport-fields .form-group { margin-bottom: .4rem; }
+    .airport-fields .form-group label { font-size: .7rem; margin-bottom: .15rem; }
     .airport-fields .form-control,
-    .airport-fields .form-select { padding: .45rem .75rem; font-size: .85rem; }
+    .airport-fields .form-select { padding: .4rem .65rem; font-size: .82rem; }
     .airport-fields .trip-toggle { margin-bottom: 0; padding: .2rem; }
-    .airport-fields .trip-toggle label { padding: .35rem; font-size: .78rem; }
+    .airport-fields .trip-toggle label { padding: .3rem; font-size: .75rem; }
 
     .btn-book {
-      width: 100%; padding: .85rem;
+      width: 100%; padding: .7rem;
       background: linear-gradient(135deg, #0d6efd, #0056b3);
-      color: var(--white); font-weight: 700; font-size: 1rem;
+      color: var(--white); font-weight: 700; font-size: .9rem;
       border: none; border-radius: 8px; cursor: pointer;
       display: flex; align-items: center; justify-content: center; gap: .5rem;
       transition: all var(--transition);
-      margin-top: .5rem;
+      margin-top: .4rem;
     }
     .btn-book:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(13,110,253,.4); }
 
-    .book-note { text-align: center; font-size: .75rem; color: var(--gray); margin-top: .6rem; padding-bottom: .5rem; }
+    .book-note { text-align: center; font-size: .72rem; color: var(--gray); margin-top: .4rem; padding-bottom: .2rem; }
 
     /* ── CUSTOM CHECKBOX ───────────────────────────────── */
     .checkbox-label {
