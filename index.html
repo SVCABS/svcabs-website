@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>S V CABS – Chennai's Most Trusted Cab Service | 25 Years of Excellence</title>
+  <title>S V CABS – Chennai's Most Trusted Cab Service | Since 2000</title>
   <meta name="description" content="S V CABS: Chennai's premier cab service since 2000. Corporate, airport, outstation, local, and luxury rides. 50,000+ trips. 98% satisfaction. Book now on WhatsApp." />
   <meta name="keywords" content="cab service Chennai, airport cab Chennai, outstation cab Chennai, corporate cab Chennai, local cab Chennai, 24/7 cab Chennai, SV Cabs, Adyar cab service, luxury cab Chennai, cab booking Chennai, best cab service Chennai" />
   <meta name="author" content="S V CABS" />
@@ -22,7 +22,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="S V CABS – Chennai's Most Trusted Cab Service" />
-  <meta name="twitter:description" content="25 years of trusted transportation in Chennai. Book your ride on WhatsApp now." />
+  <meta name="twitter:description" content="25+ years of trusted transportation in Chennai. Book your ride on WhatsApp now." />
   <meta name="twitter:image" content="https://svcabs.net/assets/images/svcabs-logo.png" />
 
   <!-- Geo Tags -->
@@ -483,6 +483,7 @@
     /* ── SERVICES ──────────────────────────────────────── */
     .services-section { padding: 7rem 0; background: var(--cream); }
     .svc-card {
+      display: block; color: inherit;
       background: var(--white);
       border-radius: var(--radius);
       padding: 2rem 1.5rem;
@@ -491,6 +492,7 @@
       transition: all var(--transition);
       position: relative; overflow: hidden;
     }
+    .svc-card .svc-more { display: inline-flex; align-items: center; gap: .35rem; color: #0d6efd; font-size: .82rem; font-weight: 600; margin-top: .9rem; }
     .svc-card::after {
       content: '';
       position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
@@ -932,46 +934,52 @@
     </div>
     <div class="row g-4 justify-content-center">
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="local-rides.html">
           <div class="svc-icon"><i class="fas fa-city"></i></div>
           <h5>Local Rides</h5>
           <p>Seamless intra-city travel available around the clock. Metered, transparent, and always on time within Chennai.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="outstation-cabs-chennai.html">
           <div class="svc-icon"><i class="fas fa-route"></i></div>
           <h5>Outstation Trips</h5>
           <p>Comfortable and reliable travel to any destination outside Chennai. One-way or round trip at competitive rates.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="chennai-airport-taxi.html">
           <div class="svc-icon"><i class="fas fa-plane-departure"></i></div>
           <h5>Airport Transfers</h5>
           <p>Reliable pickups and drop-offs at Chennai International Airport — every flight, every time, no stress.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="corporate-car-rental-chennai.html">
           <div class="svc-icon"><i class="fas fa-briefcase"></i></div>
           <h5>Corporate Solutions</h5>
           <p>Employee round-trips, airport transfers, and office shuttle services. Customized B2B contracts available.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="wedding-event-car-rental-chennai.html">
           <div class="svc-icon"><i class="fas fa-calendar-alt"></i></div>
           <h5>Events &amp; Weddings</h5>
           <p>Guest logistics handled seamlessly. From intimate functions to large weddings — reliable event transportation.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <div class="svc-card">
+        <a class="svc-card" href="hourly-car-rental-chennai.html">
           <div class="svc-icon"><i class="fas fa-clock"></i></div>
           <h5>Hourly Rentals</h5>
           <p>Book a cab by the hour for shopping, medical appointments, or multi-stop errands — flexible and convenient.</p>
-        </div>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1184,12 +1192,12 @@
       <div class="col-sm-6 col-lg-2">
         <div class="footer-section-title">Services</div>
         <ul class="footer-links">
-          <li><a href="#services">Local Rides</a></li>
-          <li><a href="#services">Outstation</a></li>
-          <li><a href="#services">Airport Transfer</a></li>
-          <li><a href="#services">Corporate</a></li>
-          <li><a href="#services">Events &amp; Weddings</a></li>
-          <li><a href="#services">Hourly Rental</a></li>
+          <li><a href="local-rides.html">Local Rides</a></li>
+          <li><a href="outstation-cabs-chennai.html">Outstation</a></li>
+          <li><a href="chennai-airport-taxi.html">Airport Transfer</a></li>
+          <li><a href="corporate-car-rental-chennai.html">Corporate</a></li>
+          <li><a href="wedding-event-car-rental-chennai.html">Events &amp; Weddings</a></li>
+          <li><a href="hourly-car-rental-chennai.html">Hourly Rental</a></li>
         </ul>
       </div>
       <div class="col-sm-6 col-lg-2">
@@ -1217,7 +1225,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      &copy; 2026 S V CABS. All rights reserved. · Adyar, Chennai, Tamil Nadu, India
+      &copy; <span id="yr">2026</span> S V CABS. All rights reserved. · Adyar, Chennai, Tamil Nadu, India
     </div>
   </div>
 </footer>
@@ -1228,6 +1236,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
+/* ── COPYRIGHT YEAR ──────────────────────────────── */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
 /* ── LOADER ──────────────────────────────────────── */
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');

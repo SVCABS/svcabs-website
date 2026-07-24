@@ -375,10 +375,11 @@
 
 <div class="page-footer">
   <a href="index.html"><i class="fas fa-arrow-left"></i> Back to S V CABS</a> &nbsp;·&nbsp;
-  &copy; 2026 S V CABS · <a href="mailto:svcabs@gmail.com">svcabs@gmail.com</a>
+  &copy; <span id="yr">2026</span> S V CABS · <a href="mailto:svcabs@gmail.com">svcabs@gmail.com</a>
 </div>
 
 <script>
+document.getElementById('yr').textContent = new Date().getFullYear();
 document.getElementById('driverForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const f = this;
