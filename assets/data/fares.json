@@ -1,0 +1,206 @@
+{
+  "_comment": "SINGLE SOURCE OF TRUTH for all fares on svcabs.net. Edit this file, then run `node tools/build-fares.mjs` and commit the regenerated HTML alongside it. Never hand-edit HTML between the FARES:START/END markers.",
+  "updated": "2026-08-07",
+  "currency": "INR",
+  "whatsapp": {
+    "phone": "919444141019",
+    "consumerPrefill": "Hi! I would like a fare for the {vehicle} in Chennai.",
+    "corporatePrefill": "Hi, I'd like a corporate transport proposal for my company."
+  },
+  "source": "Indicative starting rates. Final fare confirmed on WhatsApp.",
+  "terms": [
+    "Rates cover fuel and the driver's service.",
+    "Tolls, parking, permits and state entry charges are billed as actuals.",
+    "Driver batta is charged per calendar day.",
+    "Kilometres are counted from our garage to your destination and back.",
+    "Beyond the package, extra kilometres and extra hours are charged at the rates shown.",
+    "Outstation trips are subject to the minimum kilometres per day shown.",
+    "Rates may be revised if fuel prices move; a quote we have confirmed is honoured."
+  ],
+  "groups": [
+    { "id": "cars", "label": "Cars", "eyebrow": "Sedans, hatchbacks & MUVs", "minKmPerDay": 250 },
+    { "id": "vans", "label": "Vans & Tempo Travellers", "eyebrow": "Group travel", "minKmPerDay": 300 }
+  ],
+
+  "vehicles": [
+    {
+      "id": "swift-dzire", "name": "Swift Dzire", "group": "cars",
+      "seats": "4+1", "body": "Sedan", "status": "published",
+      "local": { "addlKm": 15, "addlHr": 220, "packages": [
+        { "hrs": 4, "km": 40, "price": 1200 },
+        { "hrs": 8, "km": 80, "price": 2400 } ] },
+      "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
+      "airport": { "from": 900 },
+      "driverBatta": 600
+    },
+    {
+      "id": "toyota-etios", "name": "Toyota Etios", "group": "cars",
+      "seats": "4+1", "body": "Sedan", "status": "published",
+      "local": { "addlKm": 15, "addlHr": 220, "packages": [
+        { "hrs": 4, "km": 40, "price": 1200 },
+        { "hrs": 8, "km": 80, "price": 2400 } ] },
+      "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
+      "airport": { "from": 900 },
+      "driverBatta": 600
+    },
+    {
+      "_note": "Not on the reference tariff. Owner instruction: priced identically to the Swift Dzire.",
+      "id": "glanza", "name": "Toyota Glanza", "group": "cars",
+      "seats": "4+1", "body": "Hatchback", "status": "published",
+      "local": { "addlKm": 15, "addlHr": 220, "packages": [
+        { "hrs": 4, "km": 40, "price": 1200 },
+        { "hrs": 8, "km": 80, "price": 2400 } ] },
+      "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
+      "airport": { "from": 900 },
+      "driverBatta": 600
+    },
+    {
+      "_note": "Source lists 6+1 and 7+1 as separate rows with identical rates; merged into one card.",
+      "id": "innova", "name": "Toyota Innova", "group": "cars",
+      "seats": "6+1 / 7+1", "body": "MUV", "status": "published",
+      "local": { "addlKm": 19, "addlHr": 450, "packages": [
+        { "hrs": 4, "km": 40, "price": 1800 },
+        { "hrs": 8, "km": 80, "price": 3600 } ] },
+      "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
+      "airport": { "from": 1700 },
+      "driverBatta": 600
+    },
+    {
+      "_note": "Source lists 6+1 and 7+1 as separate rows with identical rates; merged into one card.",
+      "id": "crysta", "name": "Innova Crysta", "group": "cars",
+      "seats": "6+1 / 7+1", "body": "MUV", "status": "published",
+      "local": { "addlKm": 22, "addlHr": 500, "packages": [
+        { "hrs": 4, "km": 40, "price": 2200 },
+        { "hrs": 8, "km": 80, "price": 4400 } ] },
+      "outstation": { "base": 5000, "minKm": 250, "addlKm": 22 },
+      "airport": { "from": 1700 },
+      "driverBatta": 800
+    },
+    {
+      "_note": "Source 4hrs/40km cell is a dash — renders 'On request', not a guess.",
+      "id": "hycross", "name": "Toyota Innova Hycross", "group": "cars",
+      "seats": "6+1", "body": "MUV", "status": "published",
+      "local": { "addlKm": 28, "addlHr": 600, "packages": [
+        { "hrs": 8, "km": 80, "price": 5500 } ] },
+      "outstation": { "base": 6250, "minKm": 250, "addlKm": 28 },
+      "airport": { "from": 1700 },
+      "driverBatta": 800
+    },
+    {
+      "id": "ertiga", "name": "Maruti Ertiga", "group": "cars",
+      "seats": "6+1", "body": "MUV", "status": "published",
+      "local": { "addlKm": 19, "addlHr": 450, "packages": [
+        { "hrs": 4, "km": 40, "price": 1800 },
+        { "hrs": 8, "km": 80, "price": 3600 } ] },
+      "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
+      "airport": { "from": 1700 },
+      "driverBatta": 600
+    },
+    {
+      "id": "kia-carens", "name": "Kia Carens", "group": "cars",
+      "seats": "7+1", "body": "MUV", "status": "published",
+      "local": { "addlKm": 19, "addlHr": 450, "packages": [
+        { "hrs": 4, "km": 40, "price": 1800 },
+        { "hrs": 8, "km": 80, "price": 3600 } ] },
+      "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
+      "airport": { "from": 1700 },
+      "driverBatta": 800
+    },
+
+    {
+      "_note": "Source lists 12 and 13 seaters as separate rows with identical rates; merged into one card.",
+      "id": "tempo-traveller", "name": "Tempo Traveller", "group": "vans",
+      "seats": "12–13", "body": "Tempo Traveller", "status": "published",
+      "local": { "addlKm": 22, "addlHr": 650, "packages": [
+        { "hrs": 5, "km": 50, "price": 3000 },
+        { "hrs": 10, "km": 100, "price": 6000 },
+        { "hrs": 15, "km": 150, "price": 9000 } ] },
+      "outstation": { "base": 6600, "minKm": 300, "addlKm": 22 },
+      "driverBatta": 800
+    },
+    {
+      "id": "tempo-traveller-18", "name": "Tempo Traveller 18", "group": "vans",
+      "seats": "18", "body": "Tempo Traveller", "status": "published",
+      "local": { "addlKm": 30, "addlHr": 750, "packages": [
+        { "hrs": 5, "km": 50, "price": 4000 },
+        { "hrs": 10, "km": 100, "price": 8000 },
+        { "hrs": 15, "km": 150, "price": 12000 } ] },
+      "outstation": { "base": 7800, "minKm": 300, "addlKm": 26 },
+      "driverBatta": 800
+    },
+    {
+      "_note": "Owner-supplied tariff. Note: Urbania outstation minimum is 250 km/day, unlike the 300 km on the other vans.",
+      "id": "urbania-12", "name": "Force Urbania 12+1", "group": "vans",
+      "seats": "12+1", "body": "Luxury van", "status": "published",
+      "transfer": { "from": 4000 },
+      "local": { "addlKm": 38, "addlHr": 1000, "packages": [
+        { "hrs": 10, "km": 100, "price": 8000 },
+        { "hrs": 15, "km": 150, "price": 12000 } ] },
+      "outstation": { "base": 9500, "minKm": 250, "addlKm": 38 },
+      "driverBatta": 1000
+    },
+    {
+      "id": "urbania-17", "name": "Force Urbania 17+1", "group": "vans",
+      "seats": "17+1", "body": "Luxury van", "status": "published",
+      "transfer": { "from": 5000 },
+      "local": { "addlKm": 40, "addlHr": 1200, "packages": [
+        { "hrs": 10, "km": 100, "price": 10000 },
+        { "hrs": 15, "km": 150, "price": 15000 } ] },
+      "outstation": { "base": 10000, "minKm": 250, "addlKm": 40 },
+      "driverBatta": 1000
+    },
+    {
+      "id": "mahindra-tourister", "name": "Mahindra Tourister", "group": "vans",
+      "seats": "16", "body": "Mini coach", "status": "published",
+      "local": { "addlKm": 22, "addlHr": 650, "packages": [
+        { "hrs": 5, "km": 50, "price": 3000 },
+        { "hrs": 10, "km": 100, "price": 6000 },
+        { "hrs": 15, "km": 150, "price": 9000 } ] },
+      "outstation": { "base": 6600, "minKm": 300, "addlKm": 22 },
+      "driverBatta": 700
+    }
+  ],
+
+  "quoteOnly": [
+    {
+      "_note": "Luxury fleet is arranged per booking, so it is quoted rather than listed. Do not publish a rate here without the owner's figure.",
+      "id": "luxury", "name": "Luxury Cars", "seats": "Mercedes-Benz · Audi · BMW",
+      "blurb": "Executive arrivals, VIP guest movement and wedding cars. Arranged per booking, priced to the vehicle, duration and occasion.",
+      "cta": "consumer",
+      "prefill": "Hi! I would like a quote for a luxury car (Mercedes-Benz / Audi / BMW) in Chennai."
+    },
+    {
+      "id": "minibus", "name": "Mini Bus & Coach", "seats": "21 / 25 / 30 seater",
+      "blurb": "Staff movement, college trips, temple tours and large group travel across Tamil Nadu.",
+      "cta": "consumer",
+      "prefill": "Hi! I would like a quote for a mini bus in Chennai.",
+      "_ratesNote": "Held for reference only. The generator never renders these as prices — mini bus is quote-only on every page.",
+      "rates": {
+        "21": { "local10h100km": 8500, "addlKm": 28, "addlHr": 800, "outstationBase": 8700, "outstationMinKm": 300, "outstationAddlKm": 29, "driverBatta": 1000 },
+        "25": { "local10h100km": 10000, "addlKm": 32, "addlHr": 900, "outstationBase": 9900, "outstationMinKm": 300, "outstationAddlKm": 33, "driverBatta": 1000 },
+        "30": { "local10h100km": null, "addlKm": null, "addlHr": null, "outstationBase": 16500, "outstationMinKm": 300, "outstationAddlKm": 55, "driverBatta": 1000 }
+      }
+    },
+    {
+      "id": "events", "name": "Weddings & Events", "seats": "Any fleet mix",
+      "blurb": "Multi-vehicle wedding and event logistics, decorated cars, guest shuttles and multi-day coverage.",
+      "cta": "consumer",
+      "prefill": "Hi! I would like a quote for wedding and event transport in Chennai."
+    },
+    {
+      "id": "corporate", "name": "Corporate Contracts", "seats": "Monthly billing",
+      "blurb": "Employee shifts, office shuttles and staff airport transfers on agreed credit terms with GST invoices.",
+      "cta": "corporate"
+    }
+  ],
+
+  "pages": {
+    "tariff.html":                           { "groups": ["cars", "vans"], "fields": "full",       "quoteOnly": true, "terms": true, "schema": true },
+    "hourly-car-rental-chennai.html":        { "groups": ["cars", "vans"], "fields": "hourly",     "schema": true },
+    "local-rides.html":                      { "groups": ["cars", "vans"], "fields": "local",      "schema": true },
+    "outstation-cabs-chennai.html":          { "groups": ["cars", "vans"], "fields": "outstation", "schema": true },
+    "chennai-airport-taxi.html":             { "vehicles": ["swift-dzire", "toyota-etios", "glanza", "ertiga", "kia-carens", "innova", "crysta", "hycross", "tempo-traveller"], "fields": "airport", "quoteOnlyIds": ["luxury"], "schema": true },
+    "wedding-event-car-rental-chennai.html": { "quoteOnlyIds": ["luxury", "events", "minibus"],    "schema": false },
+    "corporate-car-rental-chennai.html":     { "quoteOnlyIds": ["corporate", "luxury", "minibus"], "schema": false }
+  }
+}
