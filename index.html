@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>S V CABS – Chennai's Most Trusted Cab Service | Since 2000</title>
-  <meta name="description" content="S V CABS: Chennai's premier cab service since 2000. Corporate, airport, outstation, local, and luxury rides. 50,000+ trips. 98% satisfaction. Book now on WhatsApp." />
+  <title>S V CABS, Chennai – Corporate Transport &amp; Cab Service Since 2000</title>
+  <meta name="description" content="S V CABS, Chennai — employee transport, airport transfers, outstation and local cabs since 2000. 50,000+ trips, GST-registered, indicative fares published. Book on WhatsApp." />
   <meta name="keywords" content="cab service Chennai, airport cab Chennai, outstation cab Chennai, corporate cab Chennai, local cab Chennai, 24/7 cab Chennai, SV Cabs, Adyar cab service, luxury cab Chennai, cab booking Chennai, best cab service Chennai" />
   <meta name="author" content="S V CABS" />
   <meta name="robots" content="index, follow" />
@@ -15,14 +15,14 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://svcabs.net" />
-  <meta property="og:title" content="S V CABS – Chennai's Most Trusted Cab Service" />
-  <meta property="og:description" content="Safe, reliable, and comfortable rides across Chennai. Corporate, airport, outstation & local trips. Book on WhatsApp instantly." />
+  <meta property="og:title" content="S V CABS, Chennai – Corporate Transport Since 2000" />
+  <meta property="og:description" content="Chennai’s corporate transport partner since 2000. Employee shuttles, airport transfers, outstation & local trips. Indicative fares published." />
   <meta property="og:image" content="https://svcabs.net/assets/images/svcabs-logo.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="S V CABS – Chennai's Most Trusted Cab Service" />
-  <meta name="twitter:description" content="25+ years of trusted transportation in Chennai. Book your ride on WhatsApp now." />
+  <meta name="twitter:title" content="S V CABS, Chennai – Corporate Transport Since 2000" />
+  <meta name="twitter:description" content="25 years of employee and corporate transport in Chennai. Book on WhatsApp or request a proposal." />
   <meta name="twitter:image" content="https://svcabs.net/assets/images/svcabs-logo.png" />
 
   <!-- Geo Tags -->
@@ -55,7 +55,7 @@
     },
     "openingHours": "Mo-Su 00:00-23:59",
     "priceRange": "₹₹",
-    "description": "Chennai's most trusted cab service since 2000. Local, outstation, airport, corporate, and luxury rides.",
+    "description": "Employee and corporate transport, airport transfers, outstation and local cabs in Chennai. Operating since 2000, GST-registered.",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=100063710363805",
       "https://www.instagram.com/svcabs",
@@ -352,15 +352,6 @@
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 
-    .outstation-fields { display: none; }
-
-    .airport-fields .form-group { margin-bottom: .4rem; }
-    .airport-fields .form-group label { font-size: .7rem; margin-bottom: .15rem; }
-    .airport-fields .form-control,
-    .airport-fields .form-select { padding: .4rem .65rem; font-size: .82rem; }
-    .airport-fields .trip-toggle { margin-bottom: 0; padding: .2rem; }
-    .airport-fields .trip-toggle label { padding: .3rem; font-size: .75rem; }
-
     .btn-book {
       width: 100%; padding: .7rem;
       background: linear-gradient(135deg, #0d6efd, #0056b3);
@@ -465,8 +456,13 @@
       position: absolute; inset: 0;
       background: linear-gradient(90deg, rgba(0,39,66,.3) 0%, transparent 50%, rgba(0,39,66,.3) 100%);
     }
+    /* height:100% makes every card fill its column, so a label that wraps to two
+       lines no longer leaves the row ragged; the .lbl min-height reserves those two
+       lines everywhere so the numbers stay on a common baseline. */
     .stat-card {
-      text-align: center; padding: 1.5rem;
+      height: 100%;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding: 1.5rem 1.1rem;
       border: 1px solid rgba(255,255,255,.2);
       border-radius: var(--radius);
       background: rgba(255,255,255,.08);
@@ -477,7 +473,10 @@
       font-family: var(--font-display); font-size: 3rem; font-weight: 900;
       color: var(--white); line-height: 1;
     }
-    .stat-card .lbl { color: rgba(255,255,255,.8); font-size: .85rem; margin-top: .4rem; }
+    .stat-card .lbl {
+      color: rgba(255,255,255,.8); font-size: .85rem; margin-top: .4rem;
+      line-height: 1.4; min-height: 2.8em;
+    }
     .stat-card .icon { color: rgba(255,255,255,.7); font-size: 1.3rem; margin-bottom: .5rem; }
 
     /* ── SERVICES ──────────────────────────────────────── */
@@ -532,23 +531,10 @@
     .fleet-info h5 { font-size: .95rem; color: var(--navy); margin-bottom: .2rem; }
     .fleet-info p { color: var(--gray); font-size: .8rem; margin: 0; }
 
-    /* ── TESTIMONIALS ──────────────────────────────────── */
-    .testimonials-section { padding: 7rem 0; background: #0d6efd; }
-    .testimonials-section .section-header h2 { color: var(--white); }
-    .testimonials-section .section-header p { color: rgba(255,255,255,.75); }
-    .testimonials-section .section-eyebrow { color: #cde4ff; }
-    .t-card {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: var(--radius); padding: 2rem;
-      height: 100%;
-    }
-    .t-card .quote { color: rgba(255,255,255,.5); font-size: 2rem; line-height: 1; margin-bottom: .8rem; }
-    .t-card p { color: var(--white); font-size: .92rem; line-height: 1.7; margin-bottom: 1rem; }
-    .t-stars { color: #FFD700; font-size: .85rem; }
-
-    /* ── CONTACT ───────────────────────────────────────── */
+    /* Matches the 7rem rhythm of the other sections; this rule was never defined,
+       so the section had no padding and sat flush against the footer. */
     .contact-section { padding: 7rem 0; background: var(--cream); }
+
     .contact-card {
       background: var(--white); border-radius: 16px;
       padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,.08);
@@ -572,22 +558,28 @@
     .map-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.1); }
     .map-wrap iframe { display: block; width: 100%; }
 
-    .partner-strip {
-      background: var(--navy); border-radius: 16px; padding: 2.5rem;
-      display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center;
-      margin-top: 3rem;
-    }
-    .partner-block { text-align: center; }
-    .partner-block h4 { color: var(--white); font-size: 1.2rem; margin-bottom: .5rem; }
-    .partner-block p { color: rgba(255,255,255,.6); font-size: .85rem; margin-bottom: 1rem; }
-    .partner-divider { width: 1px; height: 80px; background: rgba(255,255,255,.15); margin: 0 auto; }
 
-    /* ── ALERT ─────────────────────────────────────────── */
-    #alertBanner {
-      border-radius: 8px; padding: .9rem 1.2rem;
-      background: #D1FAE5; border: 1px solid #6EE7B7;
-      color: #065F46; font-size: .9rem;
-      margin-bottom: 1.2rem; display: none;
+    /* ── WORK WITH US (supply-side, subordinate) ───────── */
+    .work-with-us {
+      margin-top: 3.5rem; padding: 2.1rem 2.4rem;
+      background: var(--white); border: 1px solid var(--light); border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.05);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.6rem 2rem;
+    }
+    .work-with-us .wwu-title { font-family: var(--font-display); color: var(--navy); font-size: 1.2rem; margin-bottom: .35rem; }
+    .work-with-us p { color: var(--gray); font-size: .87rem; line-height: 1.6; margin: 0; max-width: 46ch; }
+    .wwu-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .wwu-links a {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1.5px solid rgba(13,110,253,.3); color: var(--navy);
+      font-size: .87rem; font-weight: 600; padding: .55rem 1.15rem; border-radius: 100px;
+      transition: all var(--transition);
+    }
+    .wwu-links a:hover { background: #0d6efd; color: var(--white); border-color: #0d6efd; }
+    @media (max-width: 575px) {
+      .work-with-us { padding: 1.7rem 1.4rem; }
+      .wwu-links { width: 100%; }
+      .wwu-links a { flex: 1; justify-content: center; }
     }
 
     /* ── FOOTER ────────────────────────────────────────── */
@@ -627,8 +619,6 @@
       .hero { padding: 6rem 0 3rem; min-height: auto; }
       .booking-card { margin-top: 2.5rem; }
       .about-img-overlay { right: 0; bottom: -1rem; }
-      .partner-strip { grid-template-columns: 1fr; }
-      .partner-divider { width: 80px; height: 1px; }
       .form-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 767px) {
@@ -687,7 +677,6 @@
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#fleet">Fleet</a></li>
         <li class="nav-item"><a class="nav-link" href="tariff.html">Tariff</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         <li class="nav-item ms-2">
           <a class="nav-link nav-cta" href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20to%20book%20a%20cab" target="_blank">
@@ -707,12 +696,11 @@
       <!-- Left -->
       <div class="col-lg-6">
         <div class="hero-content" id="heroContent">
-          <div class="hero-eyebrow"><i class="fas fa-shield-alt"></i> Trusted Since 2000 · Adyar, Chennai</div>
-          <h1 id="heroHeading">Safe, Reliable &amp; Comfortable Rides Across <span class="gold">Chennai</span></h1>
-          <p id="heroDesc">Whether you need a cab for corporate travel or personal trips, we offer seamless transportation solutions tailored to your needs. 25+ years of excellence, 50,000+ rides completed.</p>
+          <div class="hero-eyebrow"><i class="fas fa-shield-alt"></i> Since 2000 · 50,000+ trips · GST-registered</div>
+          <h1 id="heroHeading">Chennai's corporate transport partner <span class="gold">since 2000</span></h1>
+          <p id="heroDesc">Employee shuttles and shift transport, airport transfers, outstation and local travel — run for Chennai's IT, BPO and manufacturing teams for twenty-five years. Named people who answer the phone, drivers we have verified, and invoices your finance team can audit.</p>
           <div class="hero-btns">
-            <a href="#booking" class="btn-gold"><i class="fas fa-car"></i> Book a Ride</a>
-            <a href="#about" class="btn-outline-white"><i class="fas fa-play-circle"></i> Our Story</a>
+            <a href="corporate-car-rental-chennai.html" class="btn-gold"><i class="fas fa-briefcase"></i> Request a corporate proposal</a>
           </div>
         </div>
       </div>
@@ -736,188 +724,15 @@
               <label>Your Name</label>
               <input type="text" class="form-control" name="name" placeholder="Full name" required />
             </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" class="form-control" name="phone" placeholder="+91 XXXXX XXXXX" required />
-              </div>
-              <div class="form-group">
-                <label>Cab Type</label>
-                <select class="form-select" name="cab">
-                  <option value="">Select…</option>
-                  <option>Sedan (Etios / Dzire)</option>
-                  <option>SUV (Innova / Crysta)</option>
-                  <option>Tempo Traveller</option>
-                  <option>Luxury (Benz / Audi)</option>
-                  <option>Bus (18–45 Seater)</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group" id="pickupGroup">
-              <label id="pickupLabel">Pickup Location</label>
-              <input type="text" class="form-control" name="pickup" id="pickupInput" placeholder="Pickup address" />
-            </div>
-            <!-- Local fields -->
-            <div class="local-fields">
-              <div class="form-group">
-                <label>Drop Location</label>
-                <input type="text" class="form-control" name="drop" placeholder="Drop address" />
-              </div>
-            </div>
-            <!-- Outstation fields -->
-            <div class="outstation-fields">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Destination City</label>
-                  <input type="text" class="form-control" name="destination" placeholder="e.g. Bangalore" />
-                </div>
-                <div class="form-group">
-                  <label>Trip Type</label>
-                  <select class="form-select" name="outstationType">
-                    <option>One Way</option>
-                    <option>Round Trip</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <!-- Airport fields -->
-            <div class="airport-fields" style="display:none">
-              <div class="form-group">
-                <label>Journey Type</label>
-                <div class="trip-toggle" style="margin-bottom:0">
-                  <input type="radio" name="airportDirection" id="arrival" value="Arrival" checked />
-                  <label for="arrival"><i class="fas fa-plane-arrival"></i> Arrival</label>
-                  <input type="radio" name="airportDirection" id="departure" value="Departure" />
-                  <label for="departure"><i class="fas fa-plane-departure"></i> Departure</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Home / Hotel Address</label>
-                <input type="text" class="form-control" name="airportAddress" placeholder="Your pickup / drop address" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Airline</label>
-                  <input type="text" class="form-control" name="airline" placeholder="e.g. IndiGo" />
-                </div>
-                <div class="form-group">
-                  <label>Flight No.</label>
-                  <input type="text" class="form-control" name="flightNo" placeholder="e.g. 6E 204" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Terminal</label>
-                <select class="form-select" name="terminal">
-                  <option value="">Select terminal…</option>
-                  <option>Terminal 1 (Domestic)</option>
-                  <option>Terminal 2 (International)</option>
-                  <option>Not sure</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Date</label>
-                <input type="date" class="form-control" name="date" required />
-              </div>
-              <div class="form-group">
-                <label>Time</label>
-                <input type="time" class="form-control" name="time" required />
-              </div>
-            </div>
-            <!-- Additional Instructions -->
-            <div class="form-group" style="margin-top:.2rem;margin-bottom:.4rem">
-              <label class="checkbox-label">
-                <input type="checkbox" id="hasExtraInstructions" name="hasExtra" />
-                <span class="checkbox-box"><i class="fas fa-check"></i></span>
-                Add extra instructions or special requests
-              </label>
-            </div>
-            <div class="extra-instructions" id="extraInstructions">
-              <div class="form-group">
-                <label>Additional Comments</label>
-                <textarea class="form-control" name="comments" rows="3" placeholder="e.g. Need child seat, luggage assistance, AC preferred, pick me up from gate 3…"></textarea>
-              </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" class="form-control" name="phone" placeholder="+91 XXXXX XXXXX" required />
             </div>
             <button type="submit" class="btn-book">
-              <i class="fab fa-whatsapp"></i> Confirm on WhatsApp
+              <i class="fab fa-whatsapp"></i> Book on WhatsApp
             </button>
-            <p class="book-note">Your details will be sent to our team via WhatsApp for instant confirmation.</p>
+            <p class="book-note">We’ll pick up the rest — pickup, timing and vehicle — in the chat. No advance payment.</p>
           </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-5">
-        <div class="about-img-wrap">
-          <img src="assets/images/about.png" alt="About S V CABS" />
-          <div class="about-img-overlay">
-            <div class="big">25+</div>
-            <div class="sm">Years of Trusted<br>Service</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7 about-text">
-        <div class="section-eyebrow">Our Story</div>
-        <h2>Chennai's Most Trusted Name in Transportation</h2>
-        <p>Founded in 2000 in Adyar, S V CABS has grown from a small fleet into Chennai's go-to transportation partner. We serve individuals, corporations, and event organizers — all with the same commitment to safety, punctuality, and comfort.</p>
-        <p>Our diverse fleet and experienced, verified drivers cater to local city rides, outstation journeys, airport transfers, and large-scale corporate logistics. As we continue to grow, our core values stay unchanged.</p>
-        <div class="value-pills">
-          <span class="pill">Safety First</span>
-          <span class="pill">Always On Time</span>
-          <span class="pill">Customer-Centric</span>
-          <span class="pill">Transparent Pricing</span>
-          <span class="pill">24/7 Available</span>
-          <span class="pill">Verified Drivers</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section">
-  <div class="container">
-    <div class="row g-3 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="stat-card">
-          <div class="icon"><i class="fas fa-users"></i></div>
-          <div class="num">1K+</div>
-          <div class="lbl">Happy Customers</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="stat-card">
-          <div class="icon"><i class="fas fa-award"></i></div>
-          <div class="num">25</div>
-          <div class="lbl">Years of Service</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="stat-card">
-          <div class="icon"><i class="fas fa-car"></i></div>
-          <div class="num">50K+</div>
-          <div class="lbl">Rides Completed</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="stat-card">
-          <div class="icon"><i class="fas fa-handshake"></i></div>
-          <div class="num">50+</div>
-          <div class="lbl">Corporate Partners</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="stat-card">
-          <div class="icon"><i class="fas fa-star"></i></div>
-          <div class="num">98%</div>
-          <div class="lbl">Satisfaction Rate</div>
         </div>
       </div>
     </div>
@@ -934,6 +749,14 @@
       <div class="section-line"></div>
     </div>
     <div class="row g-4 justify-content-center">
+      <div class="col-sm-6 col-lg-4">
+        <a class="svc-card" href="corporate-car-rental-chennai.html">
+          <div class="svc-icon"><i class="fas fa-briefcase"></i></div>
+          <h5>Corporate Solutions</h5>
+          <p>Employee round-trips, airport transfers, and office shuttle services. Customized B2B contracts available.</p>
+          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
       <div class="col-sm-6 col-lg-4">
         <a class="svc-card" href="local-rides.html">
           <div class="svc-icon"><i class="fas fa-city"></i></div>
@@ -959,14 +782,6 @@
         </a>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <a class="svc-card" href="corporate-car-rental-chennai.html">
-          <div class="svc-icon"><i class="fas fa-briefcase"></i></div>
-          <h5>Corporate Solutions</h5>
-          <p>Employee round-trips, airport transfers, and office shuttle services. Customized B2B contracts available.</p>
-          <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-      <div class="col-sm-6 col-lg-4">
         <a class="svc-card" href="wedding-event-car-rental-chennai.html">
           <div class="svc-icon"><i class="fas fa-calendar-alt"></i></div>
           <h5>Events &amp; Weddings</h5>
@@ -981,6 +796,80 @@
           <p>Book a cab by the hour for shopping, medical appointments, or multi-stop errands — flexible and convenient.</p>
           <span class="svc-more">Learn more <i class="fas fa-arrow-right"></i></span>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="about-img-wrap">
+          <img src="assets/images/about.png" alt="About S V CABS" />
+          <div class="about-img-overlay">
+            <div class="big">25+</div>
+            <div class="sm">Years of Trusted<br>Service</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 about-text">
+        <div class="section-eyebrow">Why S V CABS</div>
+        <h2>The things an app can't do</h2>
+        <p>Booking a cab is a solved problem. Running transport for a company is not. When a shift pickup fails at 6 a.m., you need someone accountable — a named person who knows your routes and picks up the phone — not a support queue and a refund. We have been that phone number in Chennai since 2000, from a single owned vehicle to a network of vetted partner operators.</p>
+        <p>That longevity is the whole argument. Twenty-five years of continuous operation means documented history: GST registration, permits, and invoices that trace line by line back to logged trips, so your finance team can audit what they are paying for. It means drivers we have verified and kept on the same routes, and a backup vehicle dispatched when one breaks down instead of a cancelled ride.</p>
+        <div class="value-pills">
+          <span class="pill">Operating since 2000</span>
+          <span class="pill">Named account contact</span>
+          <span class="pill">Background-checked drivers</span>
+          <span class="pill">Auditable monthly invoices</span>
+          <span class="pill">Backup vehicle cover</span>
+          <span class="pill">GST-registered</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <div class="num">1K+</div>
+          <div class="lbl">Happy Customers</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-award"></i></div>
+          <div class="num">25+</div>
+          <div class="lbl">Years of Service</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-car"></i></div>
+          <div class="num">50K+</div>
+          <div class="lbl">Rides Completed</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-handshake"></i></div>
+          <div class="num">50+</div>
+          <div class="lbl">Corporate Partners</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="stat-card">
+          <div class="icon"><i class="fas fa-clock"></i></div>
+          <div class="num">24×7</div>
+          <div class="lbl">Round-the-Clock Operations</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1030,87 +919,34 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials-section" id="testimonials">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Customer Reviews</div>
-      <h2>What Our Riders Say</h2>
-      <p>Real experiences from real customers across Chennai.</p>
-      <div class="section-line"></div>
-    </div>
-    <div class="owl-carousel owl-theme testimonial-carousel">
-      <div class="item">
-        <div class="t-card">
-          <div class="quote">"</div>
-          <p>Nice experience. The driver was courteous and the cab was well-maintained. Would definitely hire again next time.</p>
-          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="t-card">
-          <div class="quote">"</div>
-          <p>Excellent service — punctual and professional drivers. Best cab service in Chennai! Keep it up, best wishes!!</p>
-          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="t-card">
-          <div class="quote">"</div>
-          <p>The service was outstanding! The ride was comfortable and the driver was extremely professional throughout the journey.</p>
-          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="t-card">
-          <div class="quote">"</div>
-          <p>Used S V CABS for our company employee shuttles. Reliable, on time every single day. Highly recommended for corporate clients.</p>
-          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Get in Touch</div>
-      <h2>Contact Us</h2>
-      <p>Have a question or need a custom quote? We're here 24/7.</p>
+      <h2>Two ways to reach us</h2>
+      <p>Booking a ride and setting up company transport are different conversations — pick the one that fits.</p>
       <div class="section-line"></div>
     </div>
     <div class="row g-4">
-      <!-- Query Form -->
+      <!-- Split intents: consumer booking vs corporate proposal -->
       <div class="col-lg-6">
+        <div class="contact-card mb-4">
+          <h3>Book a ride</h3>
+          <p class="sub">Local, outstation or airport — confirmed on WhatsApp.</p>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.7;margin-bottom:1.4rem">Send us where you are going and when. We reply with a firm all-inclusive fare, usually within the hour. No app, no account, no advance payment.</p>
+          <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20to%20book%20a%20cab" target="_blank" class="btn-book" style="display:flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none">
+            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+          </a>
+          <p style="color:var(--gray);font-size:.8rem;margin:.9rem 0 0;text-align:center">Or see indicative rates on our <a href="tariff.html" style="color:#0d6efd;font-weight:600">tariff page</a>.</p>
+        </div>
         <div class="contact-card">
-          <h3>Send Us a Message</h3>
-          <p class="sub">We'll get back to you within 30 minutes.</p>
-          <div id="alertBanner" role="alert">✅ Your message has been sent! We'll reach out shortly.</div>
-          <form id="queryForm">
-            <div class="form-group">
-              <label>Name</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="you@email.com" required />
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us how we can help…" required></textarea>
-            </div>
-            <button type="submit" class="btn-book" style="margin-top:.5rem">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
+          <h3>Company transport</h3>
+          <p class="sub">Employee shifts, shuttles and staff travel.</p>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.7;margin-bottom:1.4rem">Tell us your routes, headcount and shift timings and we will put a written proposal together. Most companies start with a one-week pilot on a single route rather than a contract.</p>
+          <a href="corporate-car-rental-chennai.html#proposal" class="btn-book" style="display:flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none">
+            <i class="fas fa-file-signature"></i> Request a corporate proposal
+          </a>
         </div>
       </div>
       <!-- Contact Details + Map -->
@@ -1154,22 +990,17 @@
       </div>
     </div>
 
-    <!-- Partner / Driver Strip -->
-    <div class="partner-strip">
-      <div class="partner-block">
-        <h4>Own a Fleet? Partner With Us</h4>
-        <p>Join our aggregation network and grow your business with S V CABS.</p>
-        <a href="partner-form.html" class="btn-gold" target="_blank" style="display:inline-flex;font-size:.9rem;padding:.65rem 1.5rem">
-          <i class="fas fa-handshake"></i> Partner Form
-        </a>
+
+    <!-- Supply-side. Deliberately last in the section and visually subordinate to the
+         two primary CTAs above, so it does not compete with them (CLAUDE.md 2.4 / 8). -->
+    <div class="work-with-us">
+      <div>
+        <div class="wwu-title">Work With Us</div>
+        <p>Own a fleet, or drive professionally? We are always adding vetted partner operators and drivers across Chennai.</p>
       </div>
-      <div class="partner-divider"></div>
-      <div class="partner-block">
-        <h4>Looking to Drive With Us?</h4>
-        <p>Join our team of professional drivers and enjoy steady, rewarding work.</p>
-        <a href="driver-form.html" class="btn-gold" target="_blank" style="display:inline-flex;font-size:.9rem;padding:.65rem 1.5rem">
-          <i class="fas fa-id-card"></i> Driver Form
-        </a>
+      <div class="wwu-links">
+        <a href="partner-form.html">Partner With Us <i class="fas fa-arrow-right"></i></a>
+        <a href="driver-form.html">Drive With Us <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -1203,13 +1034,13 @@
         </ul>
       </div>
       <div class="col-sm-6 col-lg-2">
-        <div class="footer-section-title">Fleet</div>
+        <div class="footer-section-title">Work With Us</div>
         <ul class="footer-links">
-          <li><a href="#fleet">Sedan</a></li>
-          <li><a href="#fleet">SUV</a></li>
-          <li><a href="#fleet">Tempo Traveller</a></li>
-          <li><a href="#fleet">Luxury Sedan</a></li>
-          <li><a href="#fleet">Coach Bus</a></li>
+          <li><a href="partner-form.html">Partner With Us</a></li>
+          <li><a href="driver-form.html">Drive With Us</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#fleet">Our Fleet</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-4">
@@ -1270,99 +1101,26 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
   });
 });
 
-/* ── TRIP TYPE TOGGLE ────────────────────────────── */
-document.querySelectorAll('input[name="tripType"]').forEach(radio => {
-  radio.addEventListener('change', () => {
-    const val = radio.value;
-    const outstation  = document.querySelector('.outstation-fields');
-    const local       = document.querySelector('.local-fields');
-    const airport     = document.querySelector('.airport-fields');
-    const pickupGroup = document.getElementById('pickupGroup');
-    const pickupInput = document.getElementById('pickupInput');
-
-    outstation.style.display  = 'none';
-    local.style.display       = 'none';
-    airport.style.display     = 'none';
-    pickupGroup.style.display = 'block';
-    pickupInput.value         = '';
-
-    if (val === 'outstation') {
-      outstation.style.display = 'block';
-      pickupInput.placeholder  = 'Pickup address';
-    } else if (val === 'airport') {
-      pickupGroup.style.display = 'none';
-      airport.style.display     = 'block';
-    } else {
-      local.style.display      = 'block';
-      pickupInput.placeholder  = 'Pickup address';
-    }
-  });
-});
-
-/* ── EXTRA INSTRUCTIONS TOGGLE ───────────────────── */
-document.getElementById('hasExtraInstructions').addEventListener('change', function() {
-  document.getElementById('extraInstructions').classList.toggle('open', this.checked);
-  if (!this.checked) document.querySelector('[name="comments"]').value = '';
-});
+/* ── BOOKING CARD → WHATSAPP ────────────── */
+/* Three fields only. Everything else is settled in the WhatsApp thread —
+   a long form in front of a frictionless channel just loses bookings. */
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
   try {
-    const f = this;
-    const tripType = f.querySelector('input[name="tripType"]:checked').value;
-    const name     = f.querySelector('[name="name"]').value;
-    const phone    = f.querySelector('[name="phone"]').value;
-    const cab      = f.querySelector('[name="cab"]').value || 'Not specified';
-    const pickup = tripType === 'airport'
-      ? 'Chennai International Airport (MAA)'
-      : f.querySelector('[name="pickup"]').value;
-    const date     = f.querySelector('[name="date"]').value;
-    const time     = f.querySelector('[name="time"]').value;
+    const f     = this;
+    const trip  = f.querySelector('input[name="tripType"]:checked').value;
+    const name  = f.querySelector('[name="name"]').value.trim();
+    const phone = f.querySelector('[name="phone"]').value.trim();
+    const label = { local: 'Local ride', outstation: 'Outstation trip', airport: 'Airport transfer' }[trip];
 
-    let extra = '';
-    if (tripType === 'outstation') {
-      const dest  = f.querySelector('[name="destination"]').value;
-      const otype = f.querySelector('[name="outstationType"]').value;
-      extra = `%0ADestination: ${encodeURIComponent(dest)}%0ATrip Type: ${encodeURIComponent(otype)}`;
-    } else if (tripType === 'airport') {
-      const direction = f.querySelector('input[name="airportDirection"]:checked').value;
-      const addr      = f.querySelector('[name="airportAddress"]').value;
-      const airline   = f.querySelector('[name="airline"]').value;
-      const flightNo  = f.querySelector('[name="flightNo"]').value;
-      const terminal  = f.querySelector('[name="terminal"]').value;
-      extra = `%0AJourney: ${encodeURIComponent(direction)}%0A${direction === 'Arrival' ? 'Drop Address' : 'Pickup Address'}: ${encodeURIComponent(addr)}%0AAirline: ${encodeURIComponent(airline || 'N/A')}%0AFlight No: ${encodeURIComponent(flightNo || 'N/A')}%0ATerminal: ${encodeURIComponent(terminal || 'N/A')}`;
-    } else {
-      const drop = f.querySelector('[name="drop"]').value;
-      extra = `%0ADrop: ${encodeURIComponent(drop)}`;
-    }
-
-    const label = tripType.charAt(0).toUpperCase() + tripType.slice(1);
-    const comments = f.querySelector('[name="comments"]').value.trim();
-    const commentLine = comments ? `%0AExtra Instructions: ${encodeURIComponent(comments)}` : '';
-    const msg = `Hi! I would like to book a cab.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(label)}%0ACab Type: ${encodeURIComponent(cab)}%0APickup: ${encodeURIComponent(pickup)}${extra}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}${commentLine}`;
-
+    const msg = `Hi! I would like to book a cab.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ATrip: ${encodeURIComponent(label)}`;
     window.open(`https://api.whatsapp.com/send?phone=919444141019&text=${msg}`, '_blank');
-  } catch(err) {
-    alert('Something went wrong. Please try again or contact us directly on WhatsApp.');
+  } catch (err) {
+    alert('Something went wrong. Please message us directly on WhatsApp.');
     console.error(err);
   }
 });
 
-/* ── CONTACT FORM (MAILTO) ───────────────────────── */
-document.getElementById('queryForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const name    = form.querySelector('[name="name"]').value.trim();
-  const email   = form.querySelector('[name="email"]').value.trim();
-  const phone   = form.querySelector('[name="phone"]').value.trim();
-  const message = form.querySelector('[name="message"]').value.trim();
-
-  const subject = encodeURIComponent(`Website Enquiry from ${name}`);
-  const body    = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nMessage:\n${message}`
-  );
-
-  window.location.href = `mailto:svcabs@gmail.com?subject=${subject}&body=${body}`;
-});
 
 /* ── OWL CAROUSELS ───────────────────────────────── */
 $(document).ready(function() {
@@ -1370,11 +1128,6 @@ $(document).ready(function() {
     loop: true, margin: 20, nav: false, dots: true,
     autoplay: true, autoplayTimeout: 3500, autoplayHoverPause: true,
     responsive: { 0:{items:1}, 600:{items:2}, 1000:{items:3} }
-  });
-  $('.testimonial-carousel').owlCarousel({
-    loop: true, margin: 24, nav: false, dots: true,
-    autoplay: true, autoplayTimeout: 5000, autoplayHoverPause: true,
-    responsive: { 0:{items:1}, 768:{items:2}, 1100:{items:3} }
   });
 });
 

@@ -27,20 +27,20 @@
       "id": "swift-dzire", "name": "Swift Dzire", "group": "cars",
       "seats": "4+1", "body": "Sedan", "status": "published",
       "local": { "addlKm": 15, "addlHr": 220, "packages": [
-        { "hrs": 4, "km": 40, "price": 1200 },
-        { "hrs": 8, "km": 80, "price": 2400 } ] },
+        { "hrs": 4, "km": 40, "price": 1400 },
+        { "hrs": 8, "km": 80, "price": 2800 } ] },
       "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
-      "airport": { "from": 900 },
+      "airport": { "from": 1300 },
       "driverBatta": 600
     },
     {
       "id": "toyota-etios", "name": "Toyota Etios", "group": "cars",
       "seats": "4+1", "body": "Sedan", "status": "published",
       "local": { "addlKm": 15, "addlHr": 220, "packages": [
-        { "hrs": 4, "km": 40, "price": 1200 },
-        { "hrs": 8, "km": 80, "price": 2400 } ] },
+        { "hrs": 4, "km": 40, "price": 1400 },
+        { "hrs": 8, "km": 80, "price": 2800 } ] },
       "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
-      "airport": { "from": 900 },
+      "airport": { "from": 1300 },
       "driverBatta": 600
     },
     {
@@ -48,10 +48,10 @@
       "id": "glanza", "name": "Toyota Glanza", "group": "cars",
       "seats": "4+1", "body": "Hatchback", "status": "published",
       "local": { "addlKm": 15, "addlHr": 220, "packages": [
-        { "hrs": 4, "km": 40, "price": 1200 },
-        { "hrs": 8, "km": 80, "price": 2400 } ] },
+        { "hrs": 4, "km": 40, "price": 1400 },
+        { "hrs": 8, "km": 80, "price": 2800 } ] },
       "outstation": { "base": 3250, "minKm": 250, "addlKm": 15 },
-      "airport": { "from": 900 },
+      "airport": { "from": 1300 },
       "driverBatta": 600
     },
     {
@@ -59,10 +59,10 @@
       "id": "innova", "name": "Toyota Innova", "group": "cars",
       "seats": "6+1 / 7+1", "body": "MUV", "status": "published",
       "local": { "addlKm": 19, "addlHr": 450, "packages": [
-        { "hrs": 4, "km": 40, "price": 1800 },
-        { "hrs": 8, "km": 80, "price": 3600 } ] },
+        { "hrs": 4, "km": 40, "price": 1900 },
+        { "hrs": 8, "km": 80, "price": 3800 } ] },
       "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
-      "airport": { "from": 1700 },
+      "airport": { "from": 2100 },
       "driverBatta": 600
     },
     {
@@ -73,7 +73,7 @@
         { "hrs": 4, "km": 40, "price": 2200 },
         { "hrs": 8, "km": 80, "price": 4400 } ] },
       "outstation": { "base": 5000, "minKm": 250, "addlKm": 22 },
-      "airport": { "from": 1700 },
+      "airport": { "from": 2100 },
       "driverBatta": 800
     },
     {
@@ -83,7 +83,7 @@
       "local": { "addlKm": 28, "addlHr": 600, "packages": [
         { "hrs": 8, "km": 80, "price": 5500 } ] },
       "outstation": { "base": 6250, "minKm": 250, "addlKm": 28 },
-      "airport": { "from": 1700 },
+      "airport": { "from": 2100 },
       "driverBatta": 800
     },
     {
@@ -93,7 +93,7 @@
         { "hrs": 4, "km": 40, "price": 1800 },
         { "hrs": 8, "km": 80, "price": 3600 } ] },
       "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
-      "airport": { "from": 1700 },
+      "airport": { "from": 2100 },
       "driverBatta": 600
     },
     {
@@ -103,7 +103,7 @@
         { "hrs": 4, "km": 40, "price": 1800 },
         { "hrs": 8, "km": 80, "price": 3600 } ] },
       "outstation": { "base": 4500, "minKm": 250, "addlKm": 19 },
-      "airport": { "from": 1700 },
+      "airport": { "from": 2100 },
       "driverBatta": 800
     },
 
@@ -111,17 +111,17 @@
       "_note": "Source lists 12 and 13 seaters as separate rows with identical rates; merged into one card.",
       "id": "tempo-traveller", "name": "Tempo Traveller", "group": "vans",
       "seats": "12–13", "body": "Tempo Traveller", "status": "published",
-      "local": { "addlKm": 22, "addlHr": 650, "packages": [
+      "local": { "addlKm": 25, "addlHr": 650, "packages": [
         { "hrs": 5, "km": 50, "price": 3000 },
         { "hrs": 10, "km": 100, "price": 6000 },
         { "hrs": 15, "km": 150, "price": 9000 } ] },
-      "outstation": { "base": 6600, "minKm": 300, "addlKm": 22 },
-      "driverBatta": 800
+      "outstation": { "base": 6600, "minKm": 300, "addlKm": 25 },
+      "driverBatta": 900
     },
     {
       "id": "tempo-traveller-18", "name": "Tempo Traveller 18", "group": "vans",
       "seats": "18", "body": "Tempo Traveller", "status": "published",
-      "local": { "addlKm": 30, "addlHr": 750, "packages": [
+      "local": { "addlKm": 26, "addlHr": 650, "packages": [
         { "hrs": 5, "km": 50, "price": 4000 },
         { "hrs": 10, "km": 100, "price": 8000 },
         { "hrs": 15, "km": 150, "price": 12000 } ] },
