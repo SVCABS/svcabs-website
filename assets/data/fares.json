@@ -126,7 +126,7 @@
         { "hrs": 10, "km": 100, "price": 8000 },
         { "hrs": 15, "km": 150, "price": 12000 } ] },
       "outstation": { "base": 7800, "minKm": 300, "addlKm": 26 },
-      "driverBatta": 800
+      "driverBatta": 900
     },
     {
       "_note": "Owner-supplied tariff. Note: Urbania outstation minimum is 250 km/day, unlike the 300 km on the other vans.",
