@@ -10,13 +10,15 @@
  * it is overwritten on every run.
  */
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'assets', 'data', 'fares.json');
 const CHECK = process.argv.includes('--check');
+const STAMP = process.argv.includes('--stamp-pdf');
 
 const CARD_START = '<!-- FARES:START -->';
 const CARD_END = '<!-- FARES:END -->';
@@ -45,6 +47,15 @@ const esc = (s) =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** "2026-08-08" → "8 August 2026" — deterministic, no ICU dependency. */
+function longDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso ?? ''));
+  return m ? `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}` : null;
+}
 
 const pkgLabel = (p) => `${p.hrs} hrs / ${p.km} km`;
 /** Same package, for use after a "/" in the headline — avoids "from ₹1,200 / 4 hrs / 40 km". */
@@ -109,6 +120,51 @@ function quoteCard(data, q) {
       <div class="fc-rate">Message for a quote</div>${blurb}
       <a href="${href}" target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> ${label}</a>
     </div>`;
+}
+
+/* Fingerprint of everything the PDF depicts. A date cannot catch a rate edited on
+   the same day the PDF was exported; this does, because any edit changes the hash. */
+function ratesFingerprint(data) {
+  return createHash('sha256')
+    .update(JSON.stringify([data.vehicles, data.quoteOnly, data.terms]))
+    .digest('hex')
+    .slice(0, 16);
+}
+
+/* The PDF is exported by hand, so unlike everything else here it can fall out of
+   step with fares.json — and a PDF quoting fares the page contradicts is worse
+   than no PDF. Fail if it is missing rather than ship a dead link, and nag on
+   every run for as long as its contents trail the rates. */
+function pdfBlock(data, file) {
+  const pdf = data.pdf;
+  if (!pdf) {
+    fail(`${file}: pages sets "pdf": true but fares.json has no "pdf" block`);
+    return '';
+  }
+  let size;
+  try {
+    size = `${Math.round(statSync(join(ROOT, pdf.file)).size / 1024)} KB`;
+  } catch {
+    fail(`pdf.file "${pdf.file}" does not exist — export it before building`);
+    return '';
+  }
+  const fp = ratesFingerprint(data);
+  if (pdf.ratesHash !== fp) {
+    warnings.push(
+      `  · ${pdf.file} is STALE — rates have changed since it was exported.\n` +
+      `    The page and the PDF now quote different fares. Re-export the PDF, then run:\n` +
+      `      node tools/build-fares.mjs --stamp-pdf`
+    );
+  }
+  const when = longDate(pdf.updated);
+  const meta = [`PDF · ${size}`, when && `updated ${when}`].filter(Boolean).join(' · ');
+  return `  <div class="fare-dl">
+    <div class="fare-dl-txt">
+      <strong>${esc(pdf.headline)}</strong>
+      <span>${esc(pdf.blurb)} ${esc(meta)}.</span>
+    </div>
+    <a href="${esc(pdf.file)}" class="fare-dl-btn" download><i class="fas fa-file-pdf"></i> ${esc(pdf.label)}</a>
+  </div>`;
 }
 
 function vehicleCard(data, v, mode) {
@@ -262,6 +318,8 @@ function buildCards(data, cfg, file) {
     out.push(`  <p class="fare-note"><i class="fas fa-circle-info"></i> ${esc(data.source)}</p>`);
   }
 
+  if (cfg.pdf) out.push(pdfBlock(data, file));
+
   if (cfg.terms) {
     const items = data.terms.map((t) => `      <li>${esc(t)}</li>`).join('\n');
     out.push(`  <div class="feature-card" style="margin-top:2.4rem">
@@ -358,6 +416,28 @@ for (const v of data.vehicles) {
   }
 }
 
+/* --stamp-pdf — run this right after re-exporting the PDF to record that it now
+   matches the current rates. A targeted text replace rather than a JSON rewrite,
+   because fares.json is hand-formatted and worth keeping that way. */
+if (STAMP) {
+  const fp = ratesFingerprint(data);
+  const today = new Date().toISOString().slice(0, 10);
+  const raw = readFileSync(DATA, 'utf8');
+  const at = raw.indexOf('"ratesHash"');
+  if (at === -1) {
+    console.error('\nbuild-fares --stamp-pdf: fares.json has no "ratesHash" key in its pdf block\n');
+    process.exit(1);
+  }
+  /* Scoped to the text after ratesHash so the top-level "updated" is left alone. */
+  const tail = raw.slice(at)
+    .replace(/("ratesHash":\s*")[0-9a-f]*(")/, `$1${fp}$2`)
+    .replace(/("updated":\s*")\d{4}-\d{2}-\d{2}(")/, `$1${today}$2`);
+  writeFileSync(DATA, raw.slice(0, at) + tail);
+  data.pdf.ratesHash = fp;
+  data.pdf.updated = today;
+  console.log(`\nbuild-fares --stamp-pdf: ${data.pdf.file} stamped ${today} @ ${fp}`);
+}
+
 /* Phase 1 — render everything in memory. Nothing is written yet, so a bad
    fares.json can never leave the site half-updated. */
 const pending = [];
@@ -393,7 +473,7 @@ const changed = pending.length;
 if (!CHECK) for (const [, path, out] of pending) writeFileSync(path, out);
 
 if (warnings.length) {
-  console.warn('\nbuild-fares: rates still pending —\n' + [...new Set(warnings)].join('\n'));
+  console.warn('\nbuild-fares: needs attention —\n' + [...new Set(warnings)].join('\n'));
 }
 
 if (CHECK) {
