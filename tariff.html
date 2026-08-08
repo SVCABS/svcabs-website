@@ -311,7 +311,7 @@
         "name": "Maruti Ertiga — 4 hrs / 40 km",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "1800",
+          "price": "1900",
           "priceCurrency": "INR",
           "valueAddedTaxIncluded": false
         },
@@ -327,7 +327,7 @@
         "name": "Maruti Ertiga — 8 hrs / 80 km",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "3600",
+          "price": "3800",
           "priceCurrency": "INR",
           "valueAddedTaxIncluded": false
         },
@@ -343,7 +343,7 @@
         "name": "Kia Carens — 4 hrs / 40 km",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "1800",
+          "price": "1900",
           "priceCurrency": "INR",
           "valueAddedTaxIncluded": false
         },
@@ -359,7 +359,7 @@
         "name": "Kia Carens — 8 hrs / 80 km",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "3600",
+          "price": "3800",
           "priceCurrency": "INR",
           "valueAddedTaxIncluded": false
         },
@@ -723,6 +723,11 @@
     .fare-table td:first-child { font-weight: 600; color: var(--navy); }
     .fare-table .fare-cta { color: #0d6efd; font-weight: 600; white-space: nowrap; }
     .fare-note { color: var(--gray); font-size: .82rem; margin-top: .9rem; }
+    .fare-dl { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; padding: 1.15rem 1.4rem; background: var(--white); border: 1px solid var(--light); border-left: 3px solid #0d6efd; border-radius: var(--radius); }
+    .fare-dl-txt strong { display: block; color: var(--navy); font-size: .95rem; font-weight: 700; }
+    .fare-dl-txt span { color: var(--gray); font-size: .82rem; }
+    .fare-dl-btn { display: inline-flex; align-items: center; gap: .5rem; background: #0d6efd; color: var(--white); font-size: .88rem; font-weight: 600; padding: .65rem 1.3rem; border-radius: 100px; white-space: nowrap; transition: all var(--transition); }
+    .fare-dl-btn:hover { background: var(--navy); color: var(--white); }
 
     /* Fare cards */
     .fare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: .5rem; }
@@ -897,8 +902,8 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>8 hrs / 80 km</span><span>₹2,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹15</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹220</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,250</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹250</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹15</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹600</span></li>
       </ul>
@@ -911,8 +916,8 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>8 hrs / 80 km</span><span>₹2,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹15</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹220</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,250</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹250</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹15</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹600</span></li>
       </ul>
@@ -925,8 +930,8 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>8 hrs / 80 km</span><span>₹2,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹15</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹220</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,250</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹250</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹3,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹15</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹600</span></li>
       </ul>
@@ -939,10 +944,10 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>8 hrs / 80 km</span><span>₹3,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹450</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,500</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹380</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Driver batta / day</span><span>₹600</span></li>
+        <li class="fc-row"><span>Driver batta / day</span><span>₹700</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Toyota%20Innova%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
     </div>
@@ -953,10 +958,10 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>8 hrs / 80 km</span><span>₹4,400</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹22</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹500</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹5,000</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹450</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹5,500</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹22</span></li>
-        <li class="fc-row"><span>Driver batta / day</span><span>₹800</span></li>
+        <li class="fc-row"><span>Driver batta / day</span><span>₹700</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Innova%20Crysta%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
     </div>
@@ -966,8 +971,8 @@
       <div class="fc-rate">from ₹5,500 <small>/ 8 hrs · 80 km</small></div>
       <ul class="fc-rows">
         <li class="fc-row"><span>Extra km</span><span>₹28</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹600</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹6,250</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹550</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹8,400</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹28</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹800</span></li>
       </ul>
@@ -976,28 +981,28 @@
     <div class="fare-card">
       <h3>Maruti Ertiga</h3>
       <p class="fc-seats">6+1 seater · MUV</p>
-      <div class="fc-rate">from ₹1,800 <small>/ 4 hrs · 40 km</small></div>
+      <div class="fc-rate">from ₹1,900 <small>/ 4 hrs · 40 km</small></div>
       <ul class="fc-rows">
-        <li class="fc-row"><span>8 hrs / 80 km</span><span>₹3,600</span></li>
+        <li class="fc-row"><span>8 hrs / 80 km</span><span>₹3,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹450</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,500</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹380</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Driver batta / day</span><span>₹600</span></li>
+        <li class="fc-row"><span>Driver batta / day</span><span>₹700</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Maruti%20Ertiga%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
     </div>
     <div class="fare-card">
       <h3>Kia Carens</h3>
       <p class="fc-seats">7+1 seater · MUV</p>
-      <div class="fc-rate">from ₹1,800 <small>/ 4 hrs · 40 km</small></div>
+      <div class="fc-rate">from ₹1,900 <small>/ 4 hrs · 40 km</small></div>
       <ul class="fc-rows">
-        <li class="fc-row"><span>8 hrs / 80 km</span><span>₹3,600</span></li>
+        <li class="fc-row"><span>8 hrs / 80 km</span><span>₹3,800</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹450</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,500</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹380</span></li>
+        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹4,750</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹19</span></li>
-        <li class="fc-row"><span>Driver batta / day</span><span>₹800</span></li>
+        <li class="fc-row"><span>Driver batta / day</span><span>₹700</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Kia%20Carens%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
     </div>
@@ -1006,15 +1011,15 @@
   <div class="fare-grid">
     <div class="fare-card">
       <h3>Tempo Traveller</h3>
-      <p class="fc-seats">12–13 seater · Tempo Traveller</p>
+      <p class="fc-seats">12+1 seater · Tempo Traveller</p>
       <div class="fc-rate">from ₹3,000 <small>/ 5 hrs · 50 km</small></div>
       <ul class="fc-rows">
         <li class="fc-row"><span>10 hrs / 100 km</span><span>₹6,000</span></li>
         <li class="fc-row"><span>15 hrs / 150 km</span><span>₹9,000</span></li>
-        <li class="fc-row"><span>Extra km</span><span>₹25</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹650</span></li>
-        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹6,600</span></li>
-        <li class="fc-row"><span>Outstation extra km</span><span>₹25</span></li>
+        <li class="fc-row"><span>Extra km</span><span>₹26</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹600</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹7,800</span></li>
+        <li class="fc-row"><span>Outstation extra km</span><span>₹26</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹900</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Tempo%20Traveller%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
@@ -1026,10 +1031,10 @@
       <ul class="fc-rows">
         <li class="fc-row"><span>10 hrs / 100 km</span><span>₹8,000</span></li>
         <li class="fc-row"><span>15 hrs / 150 km</span><span>₹12,000</span></li>
-        <li class="fc-row"><span>Extra km</span><span>₹26</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹650</span></li>
-        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹7,800</span></li>
-        <li class="fc-row"><span>Outstation extra km</span><span>₹26</span></li>
+        <li class="fc-row"><span>Extra km</span><span>₹28</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹800</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹8,400</span></li>
+        <li class="fc-row"><span>Outstation extra km</span><span>₹28</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹900</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Tempo%20Traveller%2018%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
@@ -1042,8 +1047,8 @@
         <li class="fc-row"><span>10 hrs / 100 km</span><span>₹8,000</span></li>
         <li class="fc-row"><span>15 hrs / 150 km</span><span>₹12,000</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹38</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹1,000</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹9,500</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹800</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹11,400</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹38</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹1,000</span></li>
       </ul>
@@ -1057,8 +1062,8 @@
         <li class="fc-row"><span>10 hrs / 100 km</span><span>₹10,000</span></li>
         <li class="fc-row"><span>15 hrs / 150 km</span><span>₹15,000</span></li>
         <li class="fc-row"><span>Extra km</span><span>₹40</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹1,200</span></li>
-        <li class="fc-row"><span>Outstation (min 250 km/day)</span><span>₹10,000</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹1,000</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹12,000</span></li>
         <li class="fc-row"><span>Outstation extra km</span><span>₹40</span></li>
         <li class="fc-row"><span>Driver batta / day</span><span>₹1,000</span></li>
       </ul>
@@ -1066,16 +1071,16 @@
     </div>
     <div class="fare-card">
       <h3>Mahindra Tourister</h3>
-      <p class="fc-seats">16 seater · Mini coach</p>
+      <p class="fc-seats">12+1 seater · Mini coach</p>
       <div class="fc-rate">from ₹3,000 <small>/ 5 hrs · 50 km</small></div>
       <ul class="fc-rows">
         <li class="fc-row"><span>10 hrs / 100 km</span><span>₹6,000</span></li>
         <li class="fc-row"><span>15 hrs / 150 km</span><span>₹9,000</span></li>
-        <li class="fc-row"><span>Extra km</span><span>₹22</span></li>
-        <li class="fc-row"><span>Extra hour</span><span>₹650</span></li>
-        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹6,600</span></li>
-        <li class="fc-row"><span>Outstation extra km</span><span>₹22</span></li>
-        <li class="fc-row"><span>Driver batta / day</span><span>₹700</span></li>
+        <li class="fc-row"><span>Extra km</span><span>₹25</span></li>
+        <li class="fc-row"><span>Extra hour</span><span>₹600</span></li>
+        <li class="fc-row"><span>Outstation (min 300 km/day)</span><span>₹7,500</span></li>
+        <li class="fc-row"><span>Outstation extra km</span><span>₹25</span></li>
+        <li class="fc-row"><span>Driver batta / day</span><span>₹900</span></li>
       </ul>
       <a href="https://api.whatsapp.com/send?phone=919444141019&text=Hi!%20I%20would%20like%20a%20fare%20for%20the%20Mahindra%20Tourister%20in%20Chennai." target="_blank" rel="noopener" class="fc-btn"><i class="fab fa-whatsapp"></i> Confirm final fare</a>
     </div>
@@ -1112,17 +1117,25 @@
     </div>
   </div>
   <p class="fare-note"><i class="fas fa-circle-info"></i> Indicative starting rates. Final fare confirmed on WhatsApp.</p>
+  <div class="fare-dl">
+    <div class="fare-dl-txt">
+      <strong>Take the full tariff with you</strong>
+      <span>Both rate tables and the fare terms, on two pages. PDF · 309 KB · updated 8 August 2026.</span>
+    </div>
+    <a href="assets/docs/SV-CABS-Tariff.pdf" class="fare-dl-btn" download><i class="fas fa-file-pdf"></i> Download PDF</a>
+  </div>
   <div class="feature-card" style="margin-top:2.4rem">
     <div class="fc-icon"><i class="fas fa-circle-info"></i></div>
     <h3>What your fare includes</h3>
     <ul style="color:var(--gray);font-size:.9rem;line-height:1.85;margin:.6rem 0 0;padding-left:1.1rem">
-      <li>Rates cover fuel and the driver's service.</li>
-      <li>Tolls, parking, permits and state entry charges are billed as actuals.</li>
-      <li>Driver batta is charged per calendar day.</li>
-      <li>Kilometres are counted from our garage to your destination and back.</li>
-      <li>Beyond the package, extra kilometres and extra hours are charged at the rates shown.</li>
-      <li>Outstation trips are subject to the minimum kilometres per day shown.</li>
-      <li>Rates may be revised if fuel prices move; a quote we have confirmed is honoured.</li>
+      <li>Rates cover fuel and the driver's service for local use.</li>
+      <li>Tolls, parking, permits and state-entry charges are billed as actuals.</li>
+      <li>Driver batta is charged per calendar day (outstation).</li>
+      <li>Kilometres are counted garage-to-garage.</li>
+      <li>Beyond the package, extra km and hours are charged at the rates shown.</li>
+      <li>Outstation trips are subject to the minimum km/day shown.</li>
+      <li>No advance payment. No surge pricing.</li>
+      <li>Rates may be revised if fuel prices move; a confirmed quote is honoured.</li>
     </ul>
   </div>
   <!-- FARES:END -->

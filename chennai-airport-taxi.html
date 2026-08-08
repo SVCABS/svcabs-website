@@ -366,6 +366,11 @@
     .fare-table td:first-child { font-weight: 600; color: var(--navy); }
     .fare-table .fare-cta { color: #0d6efd; font-weight: 600; white-space: nowrap; }
     .fare-note { color: var(--gray); font-size: .82rem; margin-top: .9rem; }
+    .fare-dl { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; padding: 1.15rem 1.4rem; background: var(--white); border: 1px solid var(--light); border-left: 3px solid #0d6efd; border-radius: var(--radius); }
+    .fare-dl-txt strong { display: block; color: var(--navy); font-size: .95rem; font-weight: 700; }
+    .fare-dl-txt span { color: var(--gray); font-size: .82rem; }
+    .fare-dl-btn { display: inline-flex; align-items: center; gap: .5rem; background: #0d6efd; color: var(--white); font-size: .88rem; font-weight: 600; padding: .65rem 1.3rem; border-radius: 100px; white-space: nowrap; transition: all var(--transition); }
+    .fare-dl-btn:hover { background: var(--navy); color: var(--white); }
 
     /* Fare cards */
     .fare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: .5rem; }
@@ -679,7 +684,7 @@
     </div>
     <div class="fare-card is-quote">
       <h3>Tempo Traveller</h3>
-      <p class="fc-seats">12–13 seater · Tempo Traveller</p>
+      <p class="fc-seats">12+1 seater · Tempo Traveller</p>
       <div class="fc-rate">Quote on WhatsApp</div>
       <ul class="fc-rows">
         <li class="fc-row"><span>Airport entry charge</span><span>Included</span></li>
@@ -698,6 +703,13 @@
     </div>
   </div>
   <p class="fare-note"><i class="fas fa-circle-info"></i> Indicative starting rates. Final fare confirmed on WhatsApp.</p>
+  <div class="fare-dl">
+    <div class="fare-dl-txt">
+      <strong>Take the full tariff with you</strong>
+      <span>Both rate tables and the fare terms, on two pages. PDF · 309 KB · updated 8 August 2026.</span>
+    </div>
+    <a href="assets/docs/SV-CABS-Tariff.pdf" class="fare-dl-btn" download><i class="fas fa-file-pdf"></i> Download PDF</a>
+  </div>
   <!-- FARES:END -->
     <p class="fare-note"><i class="fas fa-circle-info"></i> Fares include the airport entry charge. Waiting time for delayed flights is not charged when you share your flight number in advance.</p>
     <div class="related" style="margin-top:1.6rem"><a href="tariff.html"><i class="fas fa-list-ul"></i> See the full tariff</a></div>
