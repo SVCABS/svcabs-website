@@ -333,9 +333,21 @@
     .cform-alt:hover { color: var(--navy); }
     .cform-error { color: var(--red); font-size: .86rem; font-weight: 500; margin: .6rem 0 0; }
     .cform-note { color: var(--gray); font-size: .8rem; line-height: 1.65; margin: 1.2rem 0 0; }
+
+    /* Client name wall. Static tiles — deliberately no hover lift, they are not links. */
+    .client-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .client-tile { display: flex; align-items: center; justify-content: center; min-height: 72px; padding: 1.15rem 1rem; text-align: center; background: var(--white); border: 1px solid var(--light); border-radius: var(--radius); }
+    .client-tile span { font-family: var(--font-display); font-weight: 600; font-size: .97rem; line-height: 1.4; color: var(--navy); }
+    .client-tile small { display: block; font-family: var(--font-body); font-weight: 400; font-size: .74rem; line-height: 1.45; color: var(--gray); margin-top: .25rem; }
+    .client-note { color: var(--gray); font-size: .85rem; line-height: 1.7; max-width: 640px; margin: 1.8rem auto 0; text-align: center; }
+
+    @media (max-width: 991px) {
+      .client-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 767px) {
       .cform-wrap { padding: 1.8rem 1.3rem; }
       .cform-row { grid-template-columns: 1fr; gap: 0; }
+      .client-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
     }
   </style>
 </head>
@@ -410,6 +422,32 @@
       <span class="lp-badge"><i class="fas fa-user-shield"></i> Background-checked drivers</span>
       <span class="lp-badge"><i class="fas fa-clock"></i> All shifts covered</span>
     </div>
+  </div>
+</section>
+
+<!-- CLIENT PROOF -->
+<section class="lp-section alt" id="clients">
+  <div class="container">
+    <div class="text-center" style="max-width:700px;margin:0 auto 2.5rem">
+      <div class="eyebrow">Who we move</div>
+      <h2>Chennai teams we have transported since 2000</h2>
+      <p class="lp-prose" style="color:var(--gray);line-height:1.8">Twenty-five years of employee transport, airport transfers and executive travel for IT, BPO, analytics, research and manufacturing organisations in Chennai. A selection of the companies whose people we have carried:</p>
+    </div>
+    <div class="client-grid">
+      <div class="client-tile"><span>HCL</span></div>
+      <div class="client-tile"><span>OfficeTiger</span></div>
+      <div class="client-tile"><span>3i Infotech</span></div>
+      <div class="client-tile"><span>Applied Data Finance</span></div>
+      <div class="client-tile"><span>GAIN Credit <small>(prev. Global Analytics)</small></span></div>
+      <div class="client-tile"><span>Beroe Technologies</span></div>
+      <div class="client-tile"><span>Murugappa Chettiar Research Centre <small>(MCRC, Murugappa Group)</small></span></div>
+      <div class="client-tile"><span>Ecorys</span></div>
+      <div class="client-tile"><span>Phyto Flux</span></div>
+      <div class="client-tile"><span>Cornet Technologies</span></div>
+      <div class="client-tile"><span>Karya Technology</span></div>
+      <div class="client-tile"><span>Economic Perspectives</span></div>
+    </div>
+    <p class="client-note">Listed as a record of organisations we have served. We do not publish client logos, quotations or case details without written permission, and nothing here implies an endorsement by any company named.</p>
   </div>
 </section>
 
